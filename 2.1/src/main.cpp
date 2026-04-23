@@ -3,14 +3,11 @@
 
 class Config {
 public:
-    // Піни
-    static constexpr uint8_t  LED_PIN           = 2;  
-    static constexpr uint8_t  BUTTON_PIN        = 0;    
-
-    static constexpr uint32_t BLINK_INTERVAL_MS = 500; 
-    static constexpr uint32_t DEBOUNCE_MS       = 50;  
-
-    static const uint8_t      BLINKS_ON_PRESS; 
+    static constexpr uint8_t  LED_PIN           = 2;
+    static constexpr uint8_t  BUTTON_PIN        = 0;
+    static constexpr uint32_t BLINK_INTERVAL_MS = 500;
+    static constexpr uint32_t DEBOUNCE_MS       = 50;
+    static const     uint8_t  BLINKS_ON_PRESS;
 
     Config()                         = delete;
     Config(const Config&)            = delete;
@@ -19,16 +16,28 @@ public:
 
 const uint8_t Config::BLINKS_ON_PRESS = 3;
 
-enum class LedState : uint8_t {
-    Off = LOW,
-    On  = HIGH
-};
-
 enum class LedMode : uint8_t {
     Blinking  = 0,
     AlwaysOn  = 1,
     AlwaysOff = 2,
-    _COUNT    = 3   
+    _COUNT    = 3
+};
+
+static const char* const kModeNames[] = {
+    "Blinking",
+    "AlwaysOn",
+    "AlwaysOff"
+};
+
+static LedMode nextMode(LedMode current) {
+    const uint8_t next = (static_cast<uint8_t>(current) + 1U)
+                         % static_cast<uint8_t>(LedMode::_COUNT);
+    return static_cast<LedMode>(next);
+}
+
+enum class LedState : uint8_t {
+    Off = LOW,
+    On  = HIGH
 };
 
 class Led {
@@ -58,27 +67,17 @@ private:
 
 static Led           gLed(Config::LED_PIN);
 static LedMode       gMode          = LedMode::Blinking;
-static volatile bool gButtonPressed = false; 
+static volatile bool gButtonPressed = false;
 
 void IRAM_ATTR onButtonPress() {
     gButtonPressed = true;
 }
 
-static void nextMode() {
-    const uint8_t next = (static_cast<uint8_t>(gMode) + 1U)
-                         % static_cast<uint8_t>(LedMode::_COUNT);
-    gMode = static_cast<LedMode>(next);
-
-    static const char* const kModeNames[] = {
-        "Blinking", "AlwaysOn", "AlwaysOff"
-    };
-    Serial.print(F("[MODE] -> "));
-    Serial.println(kModeNames[next]);
-}
-
 void setup() {
     Serial.begin(115200);
     Serial.println(F("[BOOT] ESP32 Embedded C++ Blink"));
+    Serial.print(F("[MODE] -> "));
+    Serial.println(kModeNames[static_cast<uint8_t>(gMode)]);
 
     gLed.init();
 
@@ -88,25 +87,27 @@ void setup() {
 }
 
 void loop() {
-    static uint32_t sLoopCount = 0;
-    static uint32_t sLastLogMs = 0;
-    static uint32_t sMaxIterUs = 0;
+    static uint32_t sLoopCount     = 0;
+    static uint32_t sLastLogMs     = 0;
+    static uint32_t sMaxIterUs     = 0;
+    static uint32_t sLastDebounceMs = 0;
+    static uint32_t sLastBlinkMs   = 0;
 
     const uint32_t iterStart = micros();
     ++sLoopCount;
-
-    static uint32_t sLastDebounceMs = 0;
 
     if (gButtonPressed) {
         const uint32_t now = millis();
         if ((now - sLastDebounceMs) >= Config::DEBOUNCE_MS) {
             sLastDebounceMs = now;
-            nextMode();
-        }
-        gButtonPressed = false;        
-    }
 
-    static uint32_t sLastBlinkMs = 0;
+            gMode = nextMode(gMode);
+
+            Serial.print(F("[MODE] -> "));
+            Serial.println(kModeNames[static_cast<uint8_t>(gMode)]);
+        }
+        gButtonPressed = false;
+    }
 
     switch (gMode) {
         case LedMode::Blinking: {
