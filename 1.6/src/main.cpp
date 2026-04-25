@@ -40,7 +40,7 @@ void setup() {
 
     for (int i = 0; i < SAMPLES; ++i) {
         rawArr[i] = analogRead(LDR_PIN);
-        mvArr[i]  = analogReadMillivolts(LDR_PIN);
+        mvArr[i]  = analogReadMilliVolts(LDR_PIN);
 
         const float vcalc = rawArr[i] * static_cast<float>(VREF_MV) / ADC_MAX;
         const float err   = vcalc - static_cast<float>(mvArr[i]);
