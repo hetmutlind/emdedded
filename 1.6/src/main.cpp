@@ -34,7 +34,9 @@ void setup() {
     Serial.println("------------------------------------------------------------");
     Serial.println(" #  | RAW  | Vcalc (mV) | Vmv (mV) | Err (mV) | Err (%)");
     Serial.println("----+------+------------+----------+----------+----------");
+}
 
+void loop() {
     int rawArr[SAMPLES];
     int  mvArr[SAMPLES];
 
@@ -72,5 +74,3 @@ void setup() {
     Serial.printf("Error mean: %+.1f mV  (%+.2f%%)\n", errMv, errPct);
     Serial.println("------------------------------------------------------------");
 }
-
-void loop() {}
