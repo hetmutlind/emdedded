@@ -61,8 +61,7 @@ class FanController {
 public:
     FanController()
         : state_(FanState::Idle)
-        , nextEventUs_(0)
-        , started_(false) {}
+        , nextEventUs_(0) {}
 
     void init() {
         pinMode(Config::FAN_PIN,      OUTPUT);
@@ -108,7 +107,6 @@ public:
 private:
     FanState state_;
     uint64_t nextEventUs_;
-    bool     started_;
 
     void applyState(FanState s) {
         state_ = s;

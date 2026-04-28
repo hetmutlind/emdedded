@@ -195,7 +195,7 @@ void loop() {
         Serial.print(F("Average:          "));  Serial.print(avg);
         Serial.println(F(" ms"));
         Serial.println(F("-----------------------------------------"));
-        Serial.println(F("[PWM] Manage motor speed with the potentiometer"));>"));
+        Serial.println(F("[PWM] Manage motor speed with the potentiometer"));
 
         detachInterrupt(digitalPinToInterrupt(Config::RELAY_FB_PIN));
         gState = AppState::RunPwm;
