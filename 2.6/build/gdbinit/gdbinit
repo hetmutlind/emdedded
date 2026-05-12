@@ -1,0 +1,2 @@
+source /home/hettie/Projects/embedded/2.6/build/gdbinit/symbols
+source /home/hettie/Projects/embedded/2.6/build/gdbinit/connect

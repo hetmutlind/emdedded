@@ -1,0 +1,275 @@
+[86000 ms]>>> Fan ON cycle #9
+[86100 ms] state=RUNNING next_event_in=3900 ms
+[87100 ms] state=RUNNING next_event_in=2900 ms
+[88100 ms] state=RUNNING next_event_in=1900 ms
+[89100 ms] state=RUNNING next_event_in=900 ms
+[90000 ms]>>> Fan OFF next cycle in 6.0 s
+[90100 ms] state=IDLE next_event_in=5900 ms
+[91100 ms] state=IDLE next_event_in=4900 ms
+[92100 ms] state=IDLE next_event_in=3900 ms
+[93100 ms] state=IDLE next_event_in=2900 ms
+[94100 ms] state=IDLE next_event_in=1900 ms
+[95100 ms] state=IDLE next_event_in=900 ms
+[96000 ms]>>> Fan ON cycle #10
+[96100 ms] state=RUNNING next_event_in=3900 ms
+[97100 ms] state=RUNNING next_event_in=2900 ms
+[98100 ms] state=RUNNING next_event_in=1900 ms
+[99100 ms] state=RUNNING next_event_in=900 ms
+[100000 ms]>>> Fan OFF next cycle in 6.0 s
+[100100 ms] state=IDLE next_event_in=5900 ms
+[101100 ms] state=IDLE next_event_in=4900 ms
+[102100 ms] state=IDLE next_event_in=3900 ms
+[103100 ms] state=IDLE next_event_in=2900 ms
+[104100 ms] state=IDLE next_event_in=1900 ms
+[105100 ms] state=IDLE next_event_in=900 ms
+[106000 ms]>>> Fan ON cycle #11
+[106100 ms] state=RUNNING next_event_in=3900 ms
+[107100 ms] state=RUNNING next_event_in=2900 ms
+[108100 ms] state=RUNNING next_event_in=1900 ms
+[109100 ms] state=RUNNING next_event_in=900 ms
+[110000 ms]>>> Fan OFF next cycle in 6.0 s
+[110100 ms] state=IDLE next_event_in=5900 ms
+[111100 ms] state=IDLE next_event_in=4900 ms
+[112100 ms] state=IDLE next_event_in=3900 ms
+[113100 ms] state=IDLE next_event_in=2900 ms
+[114100 ms] state=IDLE next_event_in=1900 ms
+[115100 ms] state=IDLE next_event_in=900 ms
+[116000 ms]>>> Fan ON cycle #12
+[116100 ms] state=RUNNING next_event_in=3900 ms
+[117100 ms] state=RUNNING next_event_in=2900 ms
+[118100 ms] state=RUNNING next_event_in=1900 ms
+[119100 ms] state=RUNNING next_event_in=900 ms
+[120000 ms]>>> Fan OFF next cycle in 6.0 s
+[120100 ms] state=IDLE next_event_in=5900 ms
+[121100 ms] state=IDLE next_event_in=4900 ms
+[122100 ms] state=IDLE next_event_in=3900 ms
+[123100 ms] state=IDLE next_event_in=2900 ms
+[124100 ms] state=IDLE next_event_in=1900 ms
+[125100 ms] state=IDLE next_event_in=900 ms
+[126000 ms]>>> Fan ON cycle #13
+[126100 ms] state=RUNNING next_event_in=3900 ms
+[127100 ms] state=RUNNING next_event_in=2900 ms
+[128100 ms] state=RUNNING next_event_in=1900 ms
+[129100 ms] state=RUNNING next_event_in=900 ms
+[130000 ms]>>> Fan OFF next cycle in 6.0 s
+[130100 ms] state=IDLE next_event_in=5900 ms
+[131100 ms] state=IDLE next_event_in=4900 ms
+[132100 ms] state=IDLE next_event_in=3900 ms
+[133100 ms] state=IDLE next_event_in=2900 ms
+[134100 ms] state=IDLE next_event_in=1900 ms
+[135100 ms] state=IDLE next_event_in=900 ms
+[136000 ms]>>> Fan ON cycle #14
+[136100 ms] state=RUNNING next_event_in=3900 ms
+[137100 ms] state=RUNNING next_event_in=2900 ms
+[138100 ms] state=RUNNING next_event_in=1900 ms
+[139100 ms] state=RUNNING next_event_in=900 ms
+[140000 ms]>>> Fan OFF next cycle in 6.0 s
+[140100 ms] state=IDLE next_event_in=5900 ms
+[141100 ms] state=IDLE next_event_in=4900 ms
+[142100 ms] state=IDLE next_event_in=3900 ms
+[143100 ms] state=IDLE next_event_in=2900 ms
+[144100 ms] state=IDLE next_event_in=1900 ms
+[145100 ms] state=IDLE next_event_in=900 ms
+[146000 ms]>>> Fan ON cycle #15
+[146100 ms] state=RUNNING next_event_in=3900 ms
+[147100 ms] state=RUNNING next_event_in=2900 ms
+[148100 ms] state=RUNNING next_event_in=1900 ms
+[149100 ms] state=RUNNING next_event_in=900 ms
+[150000 ms]>>> Fan OFF next cycle in 6.0 s
+[150100 ms] state=IDLE next_event_in=5900 ms
+[151100 ms] state=IDLE next_event_in=4900 ms
+[152100 ms] state=IDLE next_event_in=3900 ms
+[153100 ms] state=IDLE next_event_in=2900 ms
+[154100 ms] state=IDLE next_event_in=1900 ms
+[155100 ms] state=IDLE next_event_in=900 ms
+[156000 ms]>>> Fan ON cycle #16
+[156100 ms] state=RUNNING next_event_in=3900 ms
+[157100 ms] state=RUNNING next_event_in=2900 ms
+[158100 ms] state=RUNNING next_event_in=1900 ms
+[159100 ms] state=RUNNING next_event_in=900 ms
+[160000 ms]>>> Fan OFF next cycle in 6.0 s
+[160100 ms] state=IDLE next_event_in=5900 ms
+[161100 ms] state=IDLE next_event_in=4900 ms
+[162100 ms] state=IDLE next_event_in=3900 ms
+[163100 ms] state=IDLE next_event_in=2900 ms
+[164100 ms] state=IDLE next_event_in=1900 ms
+[165100 ms] state=IDLE next_event_in=900 ms
+[166000 ms]>>> Fan ON cycle #17
+[166100 ms] state=RUNNING next_event_in=3900 ms
+[167100 ms] state=RUNNING next_event_in=2900 ms
+[168100 ms] state=RUNNING next_event_in=1900 ms
+[169100 ms] state=RUNNING next_event_in=900 ms
+[170000 ms]>>> Fan OFF next cycle in 6.0 s
+[170100 ms] state=IDLE next_event_in=5900 ms
+[171100 ms] state=IDLE next_event_in=4900 ms
+[172100 ms] state=IDLE next_event_in=3900 ms
+[173100 ms] state=IDLE next_event_in=2900 ms
+[174100 ms] state=IDLE next_event_in=1900 ms
+[175100 ms] state=IDLE next_event_in=900 ms
+[176000 ms]>>> Fan ON cycle #18
+[176100 ms] state=RUNNING next_event_in=3900 ms
+[177100 ms] state=RUNNING next_event_in=2900 ms
+[178100 ms] state=RUNNING next_event_in=1900 ms
+[179100 ms] state=RUNNING next_event_in=900 ms
+[180000 ms]>>> Fan OFF next cycle in 6.0 s
+[180100 ms] state=IDLE next_event_in=5900 ms
+[181100 ms] state=IDLE next_event_in=4900 ms
+[182100 ms] state=IDLE next_event_in=3900 ms
+[183100 ms] state=IDLE next_event_in=2900 ms
+[184100 ms] state=IDLE next_event_in=1900 ms
+[185100 ms] state=IDLE next_event_in=900 ms
+[186000 ms]>>> Fan ON cycle #19
+[186100 ms] state=RUNNING next_event_in=3900 ms
+[187100 ms] state=RUNNING next_event_in=2900 ms
+[188100 ms] state=RUNNING next_event_in=1900 ms
+[189100 ms] state=RUNNING next_event_in=900 ms
+[190000 ms]>>> Fan OFF next cycle in 6.0 s
+[190100 ms] state=IDLE next_event_in=5900 ms
+[191100 ms] state=IDLE next_event_in=4900 ms
+[192100 ms] state=IDLE next_event_in=3900 ms
+[193100 ms] state=IDLE next_event_in=2900 ms
+[194100 ms] state=IDLE next_event_in=1900 ms
+[195100 ms] state=IDLE next_event_in=900 ms
+[196000 ms]>>> Fan ON cycle #20
+[196100 ms] state=RUNNING next_event_in=3900 ms
+[197100 ms] state=RUNNING next_event_in=2900 ms
+[198100 ms] state=RUNNING next_event_in=1900 ms
+[199100 ms] state=RUNNING next_event_in=900 ms
+[200000 ms]>>> Fan OFF next cycle in 6.0 s
+[200100 ms] state=IDLE next_event_in=5900 ms
+[201100 ms] state=IDLE next_event_in=4900 ms
+[202100 ms] state=IDLE next_event_in=3900 ms
+[203100 ms] state=IDLE next_event_in=2900 ms
+[204100 ms] state=IDLE next_event_in=1900 ms
+[205100 ms] state=IDLE next_event_in=900 ms
+[206000 ms]>>> Fan ON cycle #21
+[206100 ms] state=RUNNING next_event_in=3900 ms
+[207100 ms] state=RUNNING next_event_in=2900 ms
+[208100 ms] state=RUNNING next_event_in=1900 ms
+[209100 ms] state=RUNNING next_event_in=900 ms
+[210000 ms]>>> Fan OFF next cycle in 6.0 s
+[210100 ms] state=IDLE next_event_in=5900 ms
+[211100 ms] state=IDLE next_event_in=4900 ms
+[212100 ms] state=IDLE next_event_in=3900 ms
+[213100 ms] state=IDLE next_event_in=2900 ms
+[214100 ms] state=IDLE next_event_in=1900 ms
+[215100 ms] state=IDLE next_event_in=900 ms
+[216000 ms]>>> Fan ON cycle #22
+[216100 ms] state=RUNNING next_event_in=3900 ms
+[217100 ms] state=RUNNING next_event_in=2900 ms
+[218100 ms] state=RUNNING next_event_in=1900 ms
+[219100 ms] state=RUNNING next_event_in=900 ms
+[220000 ms]>>> Fan OFF next cycle in 6.0 s
+[220100 ms] state=IDLE next_event_in=5900 ms
+[221100 ms] state=IDLE next_event_in=4900 ms
+[222100 ms] state=IDLE next_event_in=3900 ms
+[223100 ms] state=IDLE next_event_in=2900 ms
+[224100 ms] state=IDLE next_event_in=1900 ms
+[225100 ms] state=IDLE next_event_in=900 ms
+[226000 ms]>>> Fan ON cycle #23
+[226100 ms] state=RUNNING next_event_in=3900 ms
+[227100 ms] state=RUNNING next_event_in=2900 ms
+[228100 ms] state=RUNNING next_event_in=1900 ms
+[229100 ms] state=RUNNING next_event_in=900 ms
+[230000 ms]>>> Fan OFF next cycle in 6.0 s
+[230100 ms] state=IDLE next_event_in=5900 ms
+[231100 ms] state=IDLE next_event_in=4900 ms
+[232100 ms] state=IDLE next_event_in=3900 ms
+[233100 ms] state=IDLE next_event_in=2900 ms
+[234100 ms] state=IDLE next_event_in=1900 ms
+[235100 ms] state=IDLE next_event_in=900 ms
+[236000 ms]>>> Fan ON cycle #24
+[236100 ms] state=RUNNING next_event_in=3900 ms
+[237100 ms] state=RUNNING next_event_in=2900 ms
+[238100 ms] state=RUNNING next_event_in=1900 ms
+[239100 ms] state=RUNNING next_event_in=900 ms
+[240000 ms]>>> Fan OFF next cycle in 6.0 s
+[240100 ms] state=IDLE next_event_in=5900 ms
+[241100 ms] state=IDLE next_event_in=4900 ms
+[242100 ms] state=IDLE next_event_in=3900 ms
+[243100 ms] state=IDLE next_event_in=2900 ms
+[244100 ms] state=IDLE next_event_in=1900 ms
+[245100 ms] state=IDLE next_event_in=900 ms
+[246000 ms]>>> Fan ON cycle #25
+[246100 ms] state=RUNNING next_event_in=3900 ms
+[247100 ms] state=RUNNING next_event_in=2900 ms
+[248100 ms] state=RUNNING next_event_in=1900 ms
+[249100 ms] state=RUNNING next_event_in=900 ms
+[250000 ms]>>> Fan OFF next cycle in 6.0 s
+[250100 ms] state=IDLE next_event_in=5900 ms
+[251100 ms] state=IDLE next_event_in=4900 ms
+[252100 ms] state=IDLE next_event_in=3900 ms
+[253100 ms] state=IDLE next_event_in=2900 ms
+[254100 ms] state=IDLE next_event_in=1900 ms
+[255100 ms] state=IDLE next_event_in=900 ms
+[256000 ms]>>> Fan ON cycle #26
+[256100 ms] state=RUNNING next_event_in=3900 ms
+[257100 ms] state=RUNNING next_event_in=2900 ms
+[258100 ms] state=RUNNING next_event_in=1900 ms
+[259100 ms] state=RUNNING next_event_in=900 ms
+[260000 ms]>>> Fan OFF next cycle in 6.0 s
+[260100 ms] state=IDLE next_event_in=5900 ms
+[261100 ms] state=IDLE next_event_in=4900 ms
+[262100 ms] state=IDLE next_event_in=3900 ms
+[263100 ms] state=IDLE next_event_in=2900 ms
+[264100 ms] state=IDLE next_event_in=1900 ms
+[265100 ms] state=IDLE next_event_in=900 ms
+[266000 ms]>>> Fan ON cycle #27
+[266100 ms] state=RUNNING next_event_in=3900 ms
+[267100 ms] state=RUNNING next_event_in=2900 ms
+[268100 ms] state=RUNNING next_event_in=1900 ms
+[269100 ms] state=RUNNING next_event_in=900 ms
+[270000 ms]>>> Fan OFF next cycle in 6.0 s
+[270100 ms] state=IDLE next_event_in=5900 ms
+[271100 ms] state=IDLE next_event_in=4900 ms
+[272100 ms] state=IDLE next_event_in=3900 ms
+[273100 ms] state=IDLE next_event_in=2900 ms
+[274100 ms] state=IDLE next_event_in=1900 ms
+[275100 ms] state=IDLE next_event_in=900 ms
+[276000 ms]>>> Fan ON cycle #28
+[276100 ms] state=RUNNING next_event_in=3900 ms
+[277100 ms] state=RUNNING next_event_in=2900 ms
+[278100 ms] state=RUNNING next_event_in=1900 ms
+[279100 ms] state=RUNNING next_event_in=900 ms
+[280000 ms]>>> Fan OFF next cycle in 6.0 s
+[280100 ms] state=IDLE next_event_in=5900 ms
+[281100 ms] state=IDLE next_event_in=4900 ms
+[282100 ms] state=IDLE next_event_in=3900 ms
+[283100 ms] state=IDLE next_event_in=2900 ms
+[284100 ms] state=IDLE next_event_in=1900 ms
+[285100 ms] state=IDLE next_event_in=900 ms
+[286000 ms]>>> Fan ON cycle #29
+[286100 ms] state=RUNNING next_event_in=3900 ms
+[287100 ms] state=RUNNING next_event_in=2900 ms
+[288100 ms] state=RUNNING next_event_in=1900 ms
+[289100 ms] state=RUNNING next_event_in=900 ms
+[290000 ms]>>> Fan OFF next cycle in 6.0 s
+[290100 ms] state=IDLE next_event_in=5900 ms
+[291100 ms] state=IDLE next_event_in=4900 ms
+[292100 ms] state=IDLE next_event_in=3900 ms
+[293100 ms] state=IDLE next_event_in=2900 ms
+[294100 ms] state=IDLE next_event_in=1900 ms
+[295100 ms] state=IDLE next_event_in=900 ms
+[296000 ms]>>> Fan ON cycle #30
+[296100 ms] state=RUNNING next_event_in=3900 ms
+[297100 ms] state=RUNNING next_event_in=2900 ms
+[298100 ms] state=RUNNING next_event_in=1900 ms
+[299100 ms] state=RUNNING next_event_in=900 ms
+[300000 ms]>>> Fan OFF next cycle in 6.0 s
+[300100 ms] state=IDLE next_event_in=5900 ms
+[301100 ms] state=IDLE next_event_in=4900 ms
+[302100 ms] state=IDLE next_event_in=3900 ms
+[303100 ms] state=IDLE next_event_in=2900 ms
+[304100 ms] state=IDLE next_event_in=1900 ms
+[305100 ms] state=IDLE next_event_in=900 ms
+[306000 ms]>>> Fan ON cycle #31
+[306100 ms] state=RUNNING next_event_in=3900 ms
+[307100 ms] state=RUNNING next_event_in=2900 ms
+[308100 ms] state=RUNNING next_event_in=1900 ms
+[309100 ms] state=RUNNING next_event_in=900 ms
+[310000 ms]>>> Fan OFF next cycle in 6.0 s
+[310100 ms] state=IDLE next_event_in=5900 ms
+[311100 ms] state=IDLE next_event_in=4900 ms
+[312100 ms] state=IDLE next_event_in=3900 ms
+[313100 ms] state=IDLE next_event_in=2900 ms
+[314100 ms] state=IDLE next_event_in=1900 ms

@@ -1,6 +1,6 @@
 #include <Arduino.h>
 #include <stdint.h>
-#include <stdatomic.h>
+#include <atomic>
 
 // ─── Config ───────────────────────────────────────────────
 class Config {
@@ -31,9 +31,7 @@ enum class Phase : uint8_t {
 };
 
 // ─── Atomic phase ───
-static atomic_uint_fast32_t gPhaseAtomic = ATOMIC_VAR_INIT(
-    static_cast<uint_fast32_t>(Phase::Green)
-);
+static std::atomic<uint_fast32_t> gPhaseAtomic(static_cast<uint_fast32_t>(Phase::Green));
 
 // ─── Led helpers ──────────────────────────────────────────
 static inline void ledSet(uint8_t pin, bool on) {
@@ -117,10 +115,9 @@ private:
         blinkStart_ = phaseStart_;
         blinkOn_    = true;
 
-        atomic_store_explicit(
-            &gPhaseAtomic,
+        gPhaseAtomic.store(
             static_cast<uint_fast32_t>(p),
-            memory_order_release
+            std::memory_order_release
         );
 
         switch (p) {

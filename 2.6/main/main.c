@@ -113,7 +113,7 @@ void app_main(void) {
     const esp_timer_create_args_t timer_args = {
         .callback              = timer_cb,
         .arg                   = NULL,
-        .dispatch_method       = ESP_TIMER_ISR,
+        .dispatch_method       = ESP_TIMER_TASK,
         .name                  = "fan_timer",
         .skip_unhandled_events = true
     };
