@@ -6,22 +6,22 @@ cmake_minimum_required(VERSION ${CMAKE_VERSION}) # this file comes with cmake
 # If CMAKE_DISABLE_SOURCE_CHANGES is set to true and the source directory is an
 # existing directory in our source tree, calling file(MAKE_DIRECTORY) on it
 # would cause a fatal error, even though it would be a no-op.
-if(NOT EXISTS "/home/hettie/esp-idf/components/bootloader/subproject")
-  file(MAKE_DIRECTORY "/home/hettie/esp-idf/components/bootloader/subproject")
+if(NOT EXISTS "/home/hetmutlind/esp/esp-idf/components/bootloader/subproject")
+  file(MAKE_DIRECTORY "/home/hetmutlind/esp/esp-idf/components/bootloader/subproject")
 endif()
 file(MAKE_DIRECTORY
-  "/home/hettie/Projects/embedded/2.6/build/bootloader"
-  "/home/hettie/Projects/embedded/2.6/build/bootloader-prefix"
-  "/home/hettie/Projects/embedded/2.6/build/bootloader-prefix/tmp"
-  "/home/hettie/Projects/embedded/2.6/build/bootloader-prefix/src/bootloader-stamp"
-  "/home/hettie/Projects/embedded/2.6/build/bootloader-prefix/src"
-  "/home/hettie/Projects/embedded/2.6/build/bootloader-prefix/src/bootloader-stamp"
+  "/home/hetmutlind/projects/emdedded/2.6/build/bootloader"
+  "/home/hetmutlind/projects/emdedded/2.6/build/bootloader-prefix"
+  "/home/hetmutlind/projects/emdedded/2.6/build/bootloader-prefix/tmp"
+  "/home/hetmutlind/projects/emdedded/2.6/build/bootloader-prefix/src/bootloader-stamp"
+  "/home/hetmutlind/projects/emdedded/2.6/build/bootloader-prefix/src"
+  "/home/hetmutlind/projects/emdedded/2.6/build/bootloader-prefix/src/bootloader-stamp"
 )
 
 set(configSubDirs )
 foreach(subDir IN LISTS configSubDirs)
-    file(MAKE_DIRECTORY "/home/hettie/Projects/embedded/2.6/build/bootloader-prefix/src/bootloader-stamp/${subDir}")
+    file(MAKE_DIRECTORY "/home/hetmutlind/projects/emdedded/2.6/build/bootloader-prefix/src/bootloader-stamp/${subDir}")
 endforeach()
 if(cfgdir)
-  file(MAKE_DIRECTORY "/home/hettie/Projects/embedded/2.6/build/bootloader-prefix/src/bootloader-stamp${cfgdir}") # cfgdir has leading slash
+  file(MAKE_DIRECTORY "/home/hetmutlind/projects/emdedded/2.6/build/bootloader-prefix/src/bootloader-stamp${cfgdir}") # cfgdir has leading slash
 endif()

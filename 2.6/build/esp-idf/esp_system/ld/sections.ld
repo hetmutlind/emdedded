@@ -1,6 +1,6 @@
 /* Automatically generated file; DO NOT EDIT */
 /* Espressif IoT Development Framework Linker Script */
-/* Generated from: /home/hettie/Projects/embedded/2.6/build/esp-idf/esp_system/ld/sections.ld.in */
+/* Generated from: /home/hetmutlind/projects/emdedded/2.6/build/esp-idf/esp_system/ld/sections.ld.in */
 
 /*
  * SPDX-FileCopyrightText: 2021 Espressif Systems (Shanghai) CO LTD
@@ -14,7 +14,7 @@
  */
 /*
  * Automatically generated file. DO NOT EDIT.
- * Espressif IoT Development Framework (ESP-IDF) 6.1.0 Configuration Header
+ * Espressif IoT Development Framework (ESP-IDF) 6.2.0 Configuration Header
  */
        
 /* List of deprecated options */
@@ -650,6 +650,9 @@ SECTIONS
     _flash_rodata_start = ABSOLUTE(.);
     
  
+ _esp_err_msg_tbl_start = ABSOLUTE(.);
+ KEEP(*(SORT_BY_NAME(.esp_err_msg_tbl) SORT_BY_NAME(.esp_err_msg_tbl.*)))
+ _esp_err_msg_tbl_end = ABSOLUTE(.);
  _esp_libc_clock_array_start = ABSOLUTE(.);
  KEEP(*(SORT_BY_NAME(.esp_libc_clock_desc)))
  _esp_libc_clock_array_end = ABSOLUTE(.);
