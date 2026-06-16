@@ -1,0 +1,2 @@
+source /home/hetmutlind/projects/emdedded/3.7 MINIPROJECT/build/bootloader/gdbinit/symbols
+source /home/hetmutlind/projects/emdedded/3.7 MINIPROJECT/build/bootloader/gdbinit/connect
