@@ -134,6 +134,7 @@ void loop() {
 
     const int16_t servoDeg = constrain(potDeg, kEffMin, kEffMax);
 
+
     const int16_t deviation = servoDeg - kEffMin;
 
     gServo.writeDeg(servoDeg);
