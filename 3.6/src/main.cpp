@@ -1,16 +1,18 @@
 #include <Arduino.h>
 #include <stdint.h>
+#include <WiFi.h>
+#include <esp_wifi.h>
+#include <esp_bt.h>
+#include <ESP32Servo.h>  
 
 class Config {
 public:
-    static constexpr uint8_t  ENC_CLK        = 18;
-    static constexpr uint8_t  ENC_DT         = 19;
-    static constexpr uint8_t  ENC_BTN        = 5;
+    static constexpr uint8_t  ENC_CLK        = 36;
+    static constexpr uint8_t  ENC_DT         = 35;
+    static constexpr uint8_t  ENC_BTN        = 37;  
 
-    static constexpr uint8_t  SERVO_PIN      = 25;
-    static constexpr uint8_t  SERVO_CHANNEL  = 0;
-    static constexpr uint32_t SERVO_FREQ_HZ  = 50;
-    static constexpr uint8_t  SERVO_RES_BITS = 16;
+    static constexpr uint8_t  SERVO_PIN      = 19;
+    static constexpr uint8_t  SERVO_CHANNEL  = 0;   
     static constexpr uint16_t SERVO_MIN_US   = 500;
     static constexpr uint16_t SERVO_MAX_US   = 2500;
     static constexpr int16_t  SERVO_MIN_DEG  = 0;
@@ -32,45 +34,6 @@ public:
     Config()                         = delete;
     Config(const Config&)            = delete;
     Config& operator=(const Config&) = delete;
-};
-
-class Servo {
-public:
-    Servo(uint8_t pin, uint8_t channel)
-        : pin_(pin), channel_(channel), deg_(Config::SERVO_CENTER) {}
-
-    void init() {
-        ledcSetup(channel_, Config::SERVO_FREQ_HZ, Config::SERVO_RES_BITS);
-        ledcAttachPin(pin_, channel_);
-        writeDeg(deg_);
-    }
-
-    int16_t move(int16_t delta) {
-        const int16_t target = deg_ + delta;
-        if (delta > 0 && deg_ >= Config::SERVO_MAX_DEG) return -1;
-        if (delta < 0 && deg_ <= Config::SERVO_MIN_DEG) return -1;
-        writeDeg(constrain(target, Config::SERVO_MIN_DEG, Config::SERVO_MAX_DEG));
-        return deg_;
-    }
-
-    void center() { writeDeg(Config::SERVO_CENTER); }
-
-    int16_t deg() const { return deg_; }
-
-private:
-    void writeDeg(int16_t d) {
-        deg_ = d;
-        const uint32_t us   = map(d, Config::SERVO_MIN_DEG, Config::SERVO_MAX_DEG,
-                                     Config::SERVO_MIN_US,  Config::SERVO_MAX_US);
-        ledcWrite(channel_, us * (65536UL / 20000UL));
-    }
-
-    const uint8_t pin_;
-    const uint8_t channel_;
-    int16_t       deg_;
-
-    Servo(const Servo&)            = delete;
-    Servo& operator=(const Servo&) = delete;
 };
 
 class Buzzer {
@@ -100,9 +63,6 @@ private:
     const uint8_t pin_;
     const uint8_t channel_;
     uint32_t      untilMs_;
-
-    Buzzer(const Buzzer&)            = delete;
-    Buzzer& operator=(const Buzzer&) = delete;
 };
 
 class Encoder {
@@ -164,18 +124,15 @@ private:
     bool     longFired_;
     bool     longPressEvent_  = false;
     bool     shortConsumed_   = false;
-
-    Encoder(const Encoder&)            = delete;
-    Encoder& operator=(const Encoder&) = delete;
 };
+
+static Servo   gServo;  
+static Buzzer  gBuzzer(Config::BUZZER_PIN, Config::BUZZER_CHANNEL);
+static Encoder gEncoder(Config::ENC_CLK, Config::ENC_DT, Config::ENC_BTN);
 
 static const uint8_t kSteps[]    = { Config::STEP_COARSE, Config::STEP_MID, Config::STEP_FINE };
 static const char*   kStepNames[] = { "COARSE (5°)", "MID (2°)", "FINE (1°)" };
 static constexpr uint8_t kStepCount = sizeof(kSteps) / sizeof(kSteps[0]);
-
-static Servo   gServo(Config::SERVO_PIN,   Config::SERVO_CHANNEL);
-static Buzzer  gBuzzer(Config::BUZZER_PIN, Config::BUZZER_CHANNEL);
-static Encoder gEncoder(Config::ENC_CLK, Config::ENC_DT, Config::ENC_BTN);
 
 static uint8_t gStepIdx = 0;
 
@@ -183,7 +140,11 @@ void setup() {
     Serial.begin(115200);
     delay(200);
 
-    Serial.println(F("\n[BOOT] Module 3.6 — Encoder Servo Control"));
+    WiFi.mode(WIFI_OFF);
+    esp_wifi_stop();
+    esp_bt_controller_disable();
+
+    Serial.println(F("\n[BOOT] Module 3.6 — Encoder Servo Control (ESP32Servo)"));
     Serial.print(F("[INFO] Encoder pins : CLK="));
     Serial.print(Config::ENC_CLK);
     Serial.print(F(" DT="));
@@ -200,15 +161,18 @@ void setup() {
     Serial.println(F("[INFO] Long press   : center servo to 90°"));
     Serial.println();
 
-    gServo.init();
     gBuzzer.init();
+
     gEncoder.init();
 
+    gServo.setPeriodHertz(50); 
+    gServo.attach(Config::SERVO_PIN, Config::SERVO_MIN_US, Config::SERVO_MAX_US);
+    gServo.write(Config::SERVO_CENTER); 
     Serial.println(F("--- Ready ---"));
     Serial.print(F("[STEP] "));
     Serial.println(kStepNames[gStepIdx]);
     Serial.print(F("[POS]  "));
-    Serial.print(gServo.deg());
+    Serial.print(gServo.read());
     Serial.println(F("°  (center)"));
     Serial.println();
 }
@@ -220,17 +184,20 @@ void loop() {
     const int8_t delta = gEncoder.consumeDelta();
     if (delta != 0) {
         const int16_t step = kSteps[gStepIdx] * (delta > 0 ? 1 : -1);
-        const int16_t result = gServo.move(step);
+        int16_t current = gServo.read();
+        int16_t target = current + step;
+        target = constrain(target, Config::SERVO_MIN_DEG, Config::SERVO_MAX_DEG);
 
-        if (result < 0) {
+        if (target == current) {
             gBuzzer.beep();
             Serial.print(F("[LIMIT] "));
             Serial.print(delta > 0 ? F("MAX") : F("MIN"));
             Serial.println(F(" reached — beep"));
         } else {
-            const int16_t dev = result - Config::SERVO_MIN_DEG;
+            gServo.write(target);
+            const int16_t dev = target - Config::SERVO_MIN_DEG;
             Serial.print(F("[POS]  "));
-            Serial.print(result);
+            Serial.print(target);
             Serial.print(F("°  (dev from 0°: "));
             Serial.print(dev);
             Serial.println(F("°)"));
@@ -244,7 +211,7 @@ void loop() {
     }
 
     if (gEncoder.consumeLongPress()) {
-        gServo.center();
+        gServo.write(Config::SERVO_CENTER);
         Serial.println(F("[CENTER] Long press → servo → 90°"));
     }
 }
