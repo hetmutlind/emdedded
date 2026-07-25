@@ -1,5 +1,0 @@
-"-specs=/home/hetmutlind/projects/emdedded/3.7 MINIPROJECT/build/bootloader/specs/picolibc.specs"
--mlongcalls
--fno-builtin-memcpy
--fno-builtin-memset
--fno-builtin-bzero

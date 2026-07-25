@@ -1,0 +1,133 @@
+#include "main.h"
+#include <string.h>
+#include <stdio.h>
+
+#define CMD_TOGGLE      0xA1
+#define CMD_ACK         0xB1
+
+#define BTN_PORT        GPIOC
+#define BTN_PIN         GPIO_PIN_13
+
+#define LED_PORT        GPIOB
+#define LED_PIN         GPIO_PIN_2
+
+#define DEBOUNCE_MS     50
+#define LOG_PERIOD_MS   2000
+
+UART_HandleTypeDef huart1;
+UART_HandleTypeDef huart2;
+
+static uint8_t rx_byte = 0;
+static volatile uint8_t rx_flag = 0;
+static uint8_t led_state = 0;
+static uint32_t tx_count = 0;
+static uint32_t rx_count = 0;
+
+static void led_set(uint8_t on) {
+  led_state = on;
+  HAL_GPIO_WritePin(LED_PORT, LED_PIN, on ? GPIO_PIN_SET : GPIO_PIN_RESET);
+}
+
+static void led_toggle(void) {
+  led_set(!led_state);
+}
+
+static void uart_send_byte(uint8_t b) {
+  HAL_UART_Transmit(&huart1, &b, 1, 100);
+}
+
+static void uart_rx_arm(void) {
+  HAL_UART_Receive_IT(&huart1, &rx_byte, 1);
+}
+
+void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart) {
+  if (huart->Instance == USART1) {
+    rx_flag = 1;
+    uart_rx_arm();
+  }
+}
+
+static uint8_t btn_pressed(void) {
+  static uint8_t last_raw = 1;
+  static uint8_t stable = 1;
+  static uint32_t last_ms = 0;
+
+  uint8_t raw = (HAL_GPIO_ReadPin(BTN_PORT, BTN_PIN) == GPIO_PIN_RESET) ? 0 : 1;
+  if (raw != last_raw) {
+    last_raw = raw;
+    last_ms = HAL_GetTick();
+  }
+  if ((HAL_GetTick() - last_ms) >= DEBOUNCE_MS && raw != stable) {
+    stable = raw;
+    if (stable == 0) {
+      return 1;
+    }
+  }
+  return 0;
+}
+
+static void log_str(const char *s) {
+  HAL_UART_Transmit(&huart2, (uint8_t *)s, strlen(s), 100);
+}
+
+static char log_buf[96];
+#define LOG(...) do { snprintf(log_buf, sizeof(log_buf), __VA_ARGS__); log_str(log_buf); } while (0)
+
+void SystemClock_Config(void);
+void MX_GPIO_Init(void);
+void MX_USART1_UART_Init(void);
+void MX_USART2_UART_Init(void);
+
+int main(void) {
+  HAL_Init();
+  SystemClock_Config();
+  MX_GPIO_Init();
+  MX_USART1_UART_Init();
+  MX_USART2_UART_Init();
+
+  LOG("\r\n[BOOT] UART bridge — STM32 side (F411 Black Pill)\r\n");
+  LOG("[INFO] USART1 TX=PA9 -> ESP32 GPIO16  RX=PA10 <- ESP32 GPIO17\r\n");
+  LOG("[INFO] USART2 TX=PA2 -> ST-Link VCP (debug)\r\n");
+  LOG("[INFO] Button PC13  LED PB2\r\n");
+  LOG("[INFO] Baud: 115200  Protocol: 0xA1=toggle 0xB1=ACK\r\n");
+  LOG("--- Ready ---\r\n\r\n");
+
+  led_set(0);
+  uart_rx_arm();
+
+  uint32_t last_hb = HAL_GetTick();
+
+  while (1) {
+    if (btn_pressed()) {
+      uart_send_byte(CMD_TOGGLE);
+      tx_count++;
+      LOG("[UART TX] 0xA1 -> ESP32 toggle LED\r\n");
+    }
+
+    if (rx_flag) {
+      uint8_t cmd = rx_byte;
+      rx_flag = 0;
+
+      if (cmd == CMD_TOGGLE) {
+        led_toggle();
+        rx_count++;
+        LOG("[UART RX] 0xA1 <- ESP32 button -> LED %s\r\n",
+            led_state ? "ON" : "OFF");
+        uart_send_byte(CMD_ACK);
+        LOG("[UART TX] 0xB1 -> ESP32 ACK\r\n");
+      } else if (cmd == CMD_ACK) {
+        LOG("[UART RX] 0xB1 <- ESP32 ACK\r\n");
+      } else {
+        LOG("[UART RX] unknown: 0x%02X\r\n", cmd);
+      }
+    }
+
+    uint32_t now = HAL_GetTick();
+    if (now - last_hb >= LOG_PERIOD_MS) {
+      last_hb = now;
+      LOG("[HB] uptime=%lus  tx=%lu  rx=%lu  led=%s\r\n",
+          now / 1000, tx_count, rx_count,
+          led_state ? "ON" : "OFF");
+    }
+  }
+}
