@@ -1,0 +1,211 @@
+Command: cmake -G Ninja -B /Users/zaharmac/Projects/emdedded/2.6/build -DPYTHON_DEPS_CHECKED=1 -DPYTHON=/Users/zaharmac/.espressif/python_env/idf6.0_py3.14_env/bin/python -DESP_PLATFORM=1 -DCCACHE_ENABLE=False /Users/zaharmac/Projects/emdedded/2.6
+CMake Warning at /Users/zaharmac/Downloads/esp-idf-v6.0.2/tools/cmake/git_submodules.cmake:52 (message):
+  Git submodule
+  components/bootloader/subproject/components/micro-ecc/micro-ecc is out of
+  date.  Run the following command to fix: git submodule update --init
+  --recursive
+Call Stack (most recent call first):
+  /Users/zaharmac/Downloads/esp-idf-v6.0.2/tools/cmake/build.cmake:158 (git_submodule_check)
+  /Users/zaharmac/Downloads/esp-idf-v6.0.2/tools/cmake/build.cmake:334 (__build_get_idf_git_revision)
+  /Users/zaharmac/Downloads/esp-idf-v6.0.2/tools/cmake/idf.cmake:55 (__build_init)
+  /Users/zaharmac/Downloads/esp-idf-v6.0.2/tools/cmake/project.cmake:29 (include)
+  CMakeLists.txt:2 (include)
+
+
+CMake Warning at /Users/zaharmac/Downloads/esp-idf-v6.0.2/tools/cmake/git_submodules.cmake:52 (message):
+  Git submodule components/bt/controller/lib_esp32 is out of date.  Run the
+  following command to fix: git submodule update --init --recursive
+Call Stack (most recent call first):
+  /Users/zaharmac/Downloads/esp-idf-v6.0.2/tools/cmake/build.cmake:158 (git_submodule_check)
+  /Users/zaharmac/Downloads/esp-idf-v6.0.2/tools/cmake/build.cmake:334 (__build_get_idf_git_revision)
+  /Users/zaharmac/Downloads/esp-idf-v6.0.2/tools/cmake/idf.cmake:55 (__build_init)
+  /Users/zaharmac/Downloads/esp-idf-v6.0.2/tools/cmake/project.cmake:29 (include)
+  CMakeLists.txt:2 (include)
+
+
+CMake Warning at /Users/zaharmac/Downloads/esp-idf-v6.0.2/tools/cmake/git_submodules.cmake:52 (message):
+  Git submodule components/bt/controller/lib_esp32c5/esp32c5-bt-lib is out of
+  date.  Run the following command to fix: git submodule update --init
+  --recursive
+Call Stack (most recent call first):
+  /Users/zaharmac/Downloads/esp-idf-v6.0.2/tools/cmake/build.cmake:158 (git_submodule_check)
+  /Users/zaharmac/Downloads/esp-idf-v6.0.2/tools/cmake/build.cmake:334 (__build_get_idf_git_revision)
+  /Users/zaharmac/Downloads/esp-idf-v6.0.2/tools/cmake/idf.cmake:55 (__build_init)
+  /Users/zaharmac/Downloads/esp-idf-v6.0.2/tools/cmake/project.cmake:29 (include)
+  CMakeLists.txt:2 (include)
+
+
+CMake Warning at /Users/zaharmac/Downloads/esp-idf-v6.0.2/tools/cmake/git_submodules.cmake:52 (message):
+  Git submodule components/bt/controller/lib_esp32c6/esp32c6-bt-lib is out of
+  date.  Run the following command to fix: git submodule update --init
+  --recursive
+Call Stack (most recent call first):
+  /Users/zaharmac/Downloads/esp-idf-v6.0.2/tools/cmake/build.cmake:158 (git_submodule_check)
+  /Users/zaharmac/Downloads/esp-idf-v6.0.2/tools/cmake/build.cmake:334 (__build_get_idf_git_revision)
+  /Users/zaharmac/Downloads/esp-idf-v6.0.2/tools/cmake/idf.cmake:55 (__build_init)
+  /Users/zaharmac/Downloads/esp-idf-v6.0.2/tools/cmake/project.cmake:29 (include)
+  CMakeLists.txt:2 (include)
+
+
+CMake Warning at /Users/zaharmac/Downloads/esp-idf-v6.0.2/tools/cmake/git_submodules.cmake:52 (message):
+  Git submodule components/bt/controller/lib_esp32h2/esp32h2-bt-lib is out of
+  date.  Run the following command to fix: git submodule update --init
+  --recursive
+Call Stack (most recent call first):
+  /Users/zaharmac/Downloads/esp-idf-v6.0.2/tools/cmake/build.cmake:158 (git_submodule_check)
+  /Users/zaharmac/Downloads/esp-idf-v6.0.2/tools/cmake/build.cmake:334 (__build_get_idf_git_revision)
+  /Users/zaharmac/Downloads/esp-idf-v6.0.2/tools/cmake/idf.cmake:55 (__build_init)
+  /Users/zaharmac/Downloads/esp-idf-v6.0.2/tools/cmake/project.cmake:29 (include)
+  CMakeLists.txt:2 (include)
+
+
+CMake Warning at /Users/zaharmac/Downloads/esp-idf-v6.0.2/tools/cmake/git_submodules.cmake:52 (message):
+  Git submodule components/bt/esp_ble_mesh/lib/lib is out of date.  Run the
+  following command to fix: git submodule update --init --recursive
+Call Stack (most recent call first):
+  /Users/zaharmac/Downloads/esp-idf-v6.0.2/tools/cmake/build.cmake:158 (git_submodule_check)
+  /Users/zaharmac/Downloads/esp-idf-v6.0.2/tools/cmake/build.cmake:334 (__build_get_idf_git_revision)
+  /Users/zaharmac/Downloads/esp-idf-v6.0.2/tools/cmake/idf.cmake:55 (__build_init)
+  /Users/zaharmac/Downloads/esp-idf-v6.0.2/tools/cmake/project.cmake:29 (include)
+  CMakeLists.txt:2 (include)
+
+
+Cloning into '/Users/zaharmac/Downloads/esp-idf-v6.0.2/components/bt/host/nimble/nimble'...
+CMake Warning at /Users/zaharmac/Downloads/esp-idf-v6.0.2/tools/cmake/git_submodules.cmake:52 (message):
+  Git submodule components/cmock/CMock is out of date.  Run the following
+  command to fix: git submodule update --init --recursive
+Call Stack (most recent call first):
+  /Users/zaharmac/Downloads/esp-idf-v6.0.2/tools/cmake/build.cmake:158 (git_submodule_check)
+  /Users/zaharmac/Downloads/esp-idf-v6.0.2/tools/cmake/build.cmake:334 (__build_get_idf_git_revision)
+  /Users/zaharmac/Downloads/esp-idf-v6.0.2/tools/cmake/idf.cmake:55 (__build_init)
+  /Users/zaharmac/Downloads/esp-idf-v6.0.2/tools/cmake/project.cmake:29 (include)
+  CMakeLists.txt:2 (include)
+
+
+CMake Warning at /Users/zaharmac/Downloads/esp-idf-v6.0.2/tools/cmake/git_submodules.cmake:52 (message):
+  Git submodule components/esp_coex/lib is out of date.  Run the following
+  command to fix: git submodule update --init --recursive
+Call Stack (most recent call first):
+  /Users/zaharmac/Downloads/esp-idf-v6.0.2/tools/cmake/build.cmake:158 (git_submodule_check)
+  /Users/zaharmac/Downloads/esp-idf-v6.0.2/tools/cmake/build.cmake:334 (__build_get_idf_git_revision)
+  /Users/zaharmac/Downloads/esp-idf-v6.0.2/tools/cmake/idf.cmake:55 (__build_init)
+  /Users/zaharmac/Downloads/esp-idf-v6.0.2/tools/cmake/project.cmake:29 (include)
+  CMakeLists.txt:2 (include)
+
+
+CMake Warning at /Users/zaharmac/Downloads/esp-idf-v6.0.2/tools/cmake/git_submodules.cmake:52 (message):
+  Git submodule components/esp_phy/lib is out of date.  Run the following
+  command to fix: git submodule update --init --recursive
+Call Stack (most recent call first):
+  /Users/zaharmac/Downloads/esp-idf-v6.0.2/tools/cmake/build.cmake:158 (git_submodule_check)
+  /Users/zaharmac/Downloads/esp-idf-v6.0.2/tools/cmake/build.cmake:334 (__build_get_idf_git_revision)
+  /Users/zaharmac/Downloads/esp-idf-v6.0.2/tools/cmake/idf.cmake:55 (__build_init)
+  /Users/zaharmac/Downloads/esp-idf-v6.0.2/tools/cmake/project.cmake:29 (include)
+  CMakeLists.txt:2 (include)
+
+
+Cloning into '/Users/zaharmac/Downloads/esp-idf-v6.0.2/components/esp_wifi/lib'...
+CMake Warning at /Users/zaharmac/Downloads/esp-idf-v6.0.2/tools/cmake/git_submodules.cmake:52 (message):
+  Git submodule components/heap/tlsf is out of date.  Run the following
+  command to fix: git submodule update --init --recursive
+Call Stack (most recent call first):
+  /Users/zaharmac/Downloads/esp-idf-v6.0.2/tools/cmake/build.cmake:158 (git_submodule_check)
+  /Users/zaharmac/Downloads/esp-idf-v6.0.2/tools/cmake/build.cmake:334 (__build_get_idf_git_revision)
+  /Users/zaharmac/Downloads/esp-idf-v6.0.2/tools/cmake/idf.cmake:55 (__build_init)
+  /Users/zaharmac/Downloads/esp-idf-v6.0.2/tools/cmake/project.cmake:29 (include)
+  CMakeLists.txt:2 (include)
+
+
+CMake Warning at /Users/zaharmac/Downloads/esp-idf-v6.0.2/tools/cmake/git_submodules.cmake:52 (message):
+  Git submodule components/lwip/lwip is out of date.  Run the following
+  command to fix: git submodule update --init --recursive
+Call Stack (most recent call first):
+  /Users/zaharmac/Downloads/esp-idf-v6.0.2/tools/cmake/build.cmake:158 (git_submodule_check)
+  /Users/zaharmac/Downloads/esp-idf-v6.0.2/tools/cmake/build.cmake:334 (__build_get_idf_git_revision)
+  /Users/zaharmac/Downloads/esp-idf-v6.0.2/tools/cmake/idf.cmake:55 (__build_init)
+  /Users/zaharmac/Downloads/esp-idf-v6.0.2/tools/cmake/project.cmake:29 (include)
+  CMakeLists.txt:2 (include)
+
+
+CMake Warning at /Users/zaharmac/Downloads/esp-idf-v6.0.2/tools/cmake/git_submodules.cmake:52 (message):
+  Git submodule components/mbedtls/mbedtls is out of date.  Run the following
+  command to fix: git submodule update --init --recursive
+Call Stack (most recent call first):
+  /Users/zaharmac/Downloads/esp-idf-v6.0.2/tools/cmake/build.cmake:158 (git_submodule_check)
+  /Users/zaharmac/Downloads/esp-idf-v6.0.2/tools/cmake/build.cmake:334 (__build_get_idf_git_revision)
+  /Users/zaharmac/Downloads/esp-idf-v6.0.2/tools/cmake/idf.cmake:55 (__build_init)
+  /Users/zaharmac/Downloads/esp-idf-v6.0.2/tools/cmake/project.cmake:29 (include)
+  CMakeLists.txt:2 (include)
+
+
+CMake Warning at /Users/zaharmac/Downloads/esp-idf-v6.0.2/tools/cmake/git_submodules.cmake:52 (message):
+  Git submodule components/openthread/lib is out of date.  Run the following
+  command to fix: git submodule update --init --recursive
+Call Stack (most recent call first):
+  /Users/zaharmac/Downloads/esp-idf-v6.0.2/tools/cmake/build.cmake:158 (git_submodule_check)
+  /Users/zaharmac/Downloads/esp-idf-v6.0.2/tools/cmake/build.cmake:334 (__build_get_idf_git_revision)
+  /Users/zaharmac/Downloads/esp-idf-v6.0.2/tools/cmake/idf.cmake:55 (__build_init)
+  /Users/zaharmac/Downloads/esp-idf-v6.0.2/tools/cmake/project.cmake:29 (include)
+  CMakeLists.txt:2 (include)
+
+
+CMake Warning at /Users/zaharmac/Downloads/esp-idf-v6.0.2/tools/cmake/git_submodules.cmake:52 (message):
+  Git submodule components/openthread/openthread is out of date.  Run the
+  following command to fix: git submodule update --init --recursive
+Call Stack (most recent call first):
+  /Users/zaharmac/Downloads/esp-idf-v6.0.2/tools/cmake/build.cmake:158 (git_submodule_check)
+  /Users/zaharmac/Downloads/esp-idf-v6.0.2/tools/cmake/build.cmake:334 (__build_get_idf_git_revision)
+  /Users/zaharmac/Downloads/esp-idf-v6.0.2/tools/cmake/idf.cmake:55 (__build_init)
+  /Users/zaharmac/Downloads/esp-idf-v6.0.2/tools/cmake/project.cmake:29 (include)
+  CMakeLists.txt:2 (include)
+
+
+CMake Warning at /Users/zaharmac/Downloads/esp-idf-v6.0.2/tools/cmake/git_submodules.cmake:52 (message):
+  Git submodule components/protobuf-c/protobuf-c is out of date.  Run the
+  following command to fix: git submodule update --init --recursive
+Call Stack (most recent call first):
+  /Users/zaharmac/Downloads/esp-idf-v6.0.2/tools/cmake/build.cmake:158 (git_submodule_check)
+  /Users/zaharmac/Downloads/esp-idf-v6.0.2/tools/cmake/build.cmake:334 (__build_get_idf_git_revision)
+  /Users/zaharmac/Downloads/esp-idf-v6.0.2/tools/cmake/idf.cmake:55 (__build_init)
+  /Users/zaharmac/Downloads/esp-idf-v6.0.2/tools/cmake/project.cmake:29 (include)
+  CMakeLists.txt:2 (include)
+
+
+CMake Warning at /Users/zaharmac/Downloads/esp-idf-v6.0.2/tools/cmake/git_submodules.cmake:52 (message):
+  Git submodule components/spiffs/spiffs is out of date.  Run the following
+  command to fix: git submodule update --init --recursive
+Call Stack (most recent call first):
+  /Users/zaharmac/Downloads/esp-idf-v6.0.2/tools/cmake/build.cmake:158 (git_submodule_check)
+  /Users/zaharmac/Downloads/esp-idf-v6.0.2/tools/cmake/build.cmake:334 (__build_get_idf_git_revision)
+  /Users/zaharmac/Downloads/esp-idf-v6.0.2/tools/cmake/idf.cmake:55 (__build_init)
+  /Users/zaharmac/Downloads/esp-idf-v6.0.2/tools/cmake/project.cmake:29 (include)
+  CMakeLists.txt:2 (include)
+
+
+CMake Warning at /Users/zaharmac/Downloads/esp-idf-v6.0.2/tools/cmake/git_submodules.cmake:52 (message):
+  Git submodule components/unity/unity is out of date.  Run the following
+  command to fix: git submodule update --init --recursive
+Call Stack (most recent call first):
+  /Users/zaharmac/Downloads/esp-idf-v6.0.2/tools/cmake/build.cmake:158 (git_submodule_check)
+  /Users/zaharmac/Downloads/esp-idf-v6.0.2/tools/cmake/build.cmake:334 (__build_get_idf_git_revision)
+  /Users/zaharmac/Downloads/esp-idf-v6.0.2/tools/cmake/idf.cmake:55 (__build_init)
+  /Users/zaharmac/Downloads/esp-idf-v6.0.2/tools/cmake/project.cmake:29 (include)
+  CMakeLists.txt:2 (include)
+
+
+NOTE: /Users/zaharmac/Downloads/esp-idf-v6.0.2/components/bt/host/nimble/Kconfig.in:1421: BT_NIMBLE_MESH_PROVISIONER: 'default 0' is not a valid bool value (only 'y' and 'n' are allowed). Value is treated as 'n'.
+NOTE: /Users/zaharmac/Downloads/esp-idf-v6.0.2/components/bt/controller/esp32/Kconfig.in:177: BTDM_CTRL_LEGACY_AUTH_VENDOR_EVT_EFF: 'default 0' is not a valid bool value (only 'y' and 'n' are allowed). Value is treated as 'n'.
+NOTE: /Users/zaharmac/Downloads/esp-idf-v6.0.2/components/fatfs/Kconfig:230: FATFS_PRINT_LLI: 'default 0' is not a valid bool value (only 'y' and 'n' are allowed). Value is treated as 'n'.
+NOTE: /Users/zaharmac/Downloads/esp-idf-v6.0.2/components/fatfs/Kconfig:235: FATFS_PRINT_FLOAT: 'default 0' is not a valid bool value (only 'y' and 'n' are allowed). Value is treated as 'n'.
+NOTE: Kconfig parser version: 1
+NOTE: Kconfig defaults policy: use sdkconfig
+NOTE: Status: Finished successfully
+CMake Error at /Users/zaharmac/Downloads/esp-idf-v6.0.2/tools/cmake/component.cmake:321 (message):
+  Include directory
+  '/Users/zaharmac/Downloads/esp-idf-v6.0.2/components/mbedtls/mbedtls/include'
+  is not a directory.
+Call Stack (most recent call first):
+  /Users/zaharmac/Downloads/esp-idf-v6.0.2/tools/cmake/component.cmake:496 (__component_add_include_dirs)
+  /Users/zaharmac/Downloads/esp-idf-v6.0.2/components/mbedtls/CMakeLists.txt:51 (idf_component_register)
+
+

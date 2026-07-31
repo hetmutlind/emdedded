@@ -1,0 +1,233 @@
+Command: ninja flash
+[1/10] Performing build step for 'bootloader'
+[1/1] cd /Users/zaharmac/Projects/emdedded/finalproject/build/bootloader && /Users/zaharmac/.espressif/python_env/idf6.0_py3.14_env/bin/python /Users/zaharmac/Downloads/esp-idf-v6.0.2/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x0 /Users/zaharmac/Projects/emdedded/finalproject/build/bootloader/bootloader.bin
+Bootloader binary size 0x5240 bytes. 0x2dc0 bytes (36%) free.
+[2/10] Building CXX object esp-idf/main/CMakeFiles/__idf_main.dir/main.cpp.obj
+[31mFAILED: [code=1] [0mesp-idf/main/CMakeFiles/__idf_main.dir/main.cpp.obj 
+/Users/zaharmac/.espressif/tools/xtensa-esp-elf/esp-15.2.0_20251204/xtensa-esp-elf/bin/xtensa-esp32s3-elf-g++ -DESP_PLATFORM -DIDF_VER=\"v6.0.2-dirty\" -DSOC_MMU_PAGE_SIZE=CONFIG_MMU_PAGE_SIZE -DSOC_XTAL_FREQ_MHZ=CONFIG_XTAL_FREQ -D_GLIBCXX_HAVE_POSIX_SEMAPHORE -D_GLIBCXX_USE_POSIX_SEMAPHORE -D_GNU_SOURCE -D_POSIX_READER_WRITER_LOCKS -I/Users/zaharmac/Projects/emdedded/finalproject/build/config -I/Users/zaharmac/Projects/emdedded/finalproject/main -I/Users/zaharmac/Downloads/esp-idf-v6.0.2/components/esp_libc/platform_include -I/Users/zaharmac/Downloads/esp-idf-v6.0.2/components/freertos/config/include -I/Users/zaharmac/Downloads/esp-idf-v6.0.2/components/freertos/config/include/freertos -I/Users/zaharmac/Downloads/esp-idf-v6.0.2/components/freertos/config/xtensa/include -I/Users/zaharmac/Downloads/esp-idf-v6.0.2/components/freertos/FreeRTOS-Kernel/include -I/Users/zaharmac/Downloads/esp-idf-v6.0.2/components/freertos/FreeRTOS-Kernel/portable/xtensa/include -I/Users/zaharmac/Downloads/esp-idf-v6.0.2/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos -I/Users/zaharmac/Downloads/esp-idf-v6.0.2/components/freertos/esp_additions/include -I/Users/zaharmac/Downloads/esp-idf-v6.0.2/components/esp_hw_support/include -I/Users/zaharmac/Downloads/esp-idf-v6.0.2/components/esp_hw_support/include/soc -I/Users/zaharmac/Downloads/esp-idf-v6.0.2/components/esp_hw_support/ldo/include -I/Users/zaharmac/Downloads/esp-idf-v6.0.2/components/esp_hw_support/debug_probe/include -I/Users/zaharmac/Downloads/esp-idf-v6.0.2/components/esp_hw_support/etm/include -I/Users/zaharmac/Downloads/esp-idf-v6.0.2/components/esp_hw_support/mspi_timing_tuning/include -I/Users/zaharmac/Downloads/esp-idf-v6.0.2/components/esp_hw_support/mspi_timing_tuning/tuning_scheme_impl/include -I/Users/zaharmac/Downloads/esp-idf-v6.0.2/components/esp_hw_support/power_supply/include -I/Users/zaharmac/Downloads/esp-idf-v6.0.2/components/esp_hw_support/modem/include -I/Users/zaharmac/Downloads/esp-idf-v6.0.2/components/esp_hw_support/include/soc/esp32s3 -I/Users/zaharmac/Downloads/esp-idf-v6.0.2/components/esp_hw_support/port/esp32s3/. -I/Users/zaharmac/Downloads/esp-idf-v6.0.2/components/esp_hw_support/port/esp32s3/include -I/Users/zaharmac/Downloads/esp-idf-v6.0.2/components/esp_hw_support/mspi_timing_tuning/port/esp32s3/. -I/Users/zaharmac/Downloads/esp-idf-v6.0.2/components/esp_hw_support/mspi_timing_tuning/port/esp32s3/include -I/Users/zaharmac/Downloads/esp-idf-v6.0.2/components/heap/include -I/Users/zaharmac/Downloads/esp-idf-v6.0.2/components/heap/tlsf -I/Users/zaharmac/Downloads/esp-idf-v6.0.2/components/log/include -I/Users/zaharmac/Downloads/esp-idf-v6.0.2/components/soc/include -I/Users/zaharmac/Downloads/esp-idf-v6.0.2/components/soc/esp32s3 -I/Users/zaharmac/Downloads/esp-idf-v6.0.2/components/soc/esp32s3/include -I/Users/zaharmac/Downloads/esp-idf-v6.0.2/components/soc/esp32s3/register -I/Users/zaharmac/Downloads/esp-idf-v6.0.2/components/hal/platform_port/include -I/Users/zaharmac/Downloads/esp-idf-v6.0.2/components/hal/esp32s3/include -I/Users/zaharmac/Downloads/esp-idf-v6.0.2/components/hal/include -I/Users/zaharmac/Downloads/esp-idf-v6.0.2/components/esp_rom/include -I/Users/zaharmac/Downloads/esp-idf-v6.0.2/components/esp_rom/esp32s3/include -I/Users/zaharmac/Downloads/esp-idf-v6.0.2/components/esp_rom/esp32s3/include/esp32s3 -I/Users/zaharmac/Downloads/esp-idf-v6.0.2/components/esp_rom/esp32s3 -I/Users/zaharmac/Downloads/esp-idf-v6.0.2/components/esp_common/include -I/Users/zaharmac/Downloads/esp-idf-v6.0.2/components/esp_system/include -I/Users/zaharmac/Downloads/esp-idf-v6.0.2/components/esp_system/port/soc -I/Users/zaharmac/Downloads/esp-idf-v6.0.2/components/esp_system/port/include/private -I/Users/zaharmac/Downloads/esp-idf-v6.0.2/components/esp_stdio/include -I/Users/zaharmac/Downloads/esp-idf-v6.0.2/components/xtensa/esp32s3/include -I/Users/zaharmac/Downloads/esp-idf-v6.0.2/components/xtensa/include -I/Users/zaharmac/Downloads/esp-idf-v6.0.2/components/xtensa/deprecated_include -I/Users/zaharmac/Downloads/esp-idf-v6.0.2/components/esp_hal_gpio/include -I/Users/zaharmac/Downloads/esp-idf-v6.0.2/components/esp_hal_gpio/esp32s3/include -I/Users/zaharmac/Downloads/esp-idf-v6.0.2/components/esp_hal_usb/include -I/Users/zaharmac/Downloads/esp-idf-v6.0.2/components/esp_hal_usb/esp32s3/include -I/Users/zaharmac/Downloads/esp-idf-v6.0.2/components/esp_hal_pmu/include -I/Users/zaharmac/Downloads/esp-idf-v6.0.2/components/esp_hal_pmu/esp32s3/include -I/Users/zaharmac/Downloads/esp-idf-v6.0.2/components/esp_hal_ana_conv/include -I/Users/zaharmac/Downloads/esp-idf-v6.0.2/components/esp_hal_ana_conv/esp32s3/include -I/Users/zaharmac/Downloads/esp-idf-v6.0.2/components/esp_hal_dma/include -I/Users/zaharmac/Downloads/esp-idf-v6.0.2/components/esp_hal_dma/esp32s3/include -I/Users/zaharmac/Downloads/esp-idf-v6.0.2/components/lwip/include -I/Users/zaharmac/Downloads/esp-idf-v6.0.2/components/lwip/include/apps -I/Users/zaharmac/Downloads/esp-idf-v6.0.2/components/lwip/lwip/src/include -I/Users/zaharmac/Downloads/esp-idf-v6.0.2/components/lwip/port/include -I/Users/zaharmac/Downloads/esp-idf-v6.0.2/components/lwip/port/freertos/include -I/Users/zaharmac/Downloads/esp-idf-v6.0.2/components/lwip/port/esp32xx/include -I/Users/zaharmac/Downloads/esp-idf-v6.0.2/components/lwip/port/esp32xx/include/arch -I/Users/zaharmac/Downloads/esp-idf-v6.0.2/components/lwip/port/esp32xx/include/sys -I/Users/zaharmac/Downloads/esp-idf-v6.0.2/components/driver/i2c/include -I/Users/zaharmac/Downloads/esp-idf-v6.0.2/components/driver/touch_sensor/include -I/Users/zaharmac/Downloads/esp-idf-v6.0.2/components/driver/twai/include -I/Users/zaharmac/Downloads/esp-idf-v6.0.2/components/driver/touch_sensor/esp32s3/include -I/Users/zaharmac/Downloads/esp-idf-v6.0.2/components/esp_hal_i2c/esp32s3/include -I/Users/zaharmac/Downloads/esp-idf-v6.0.2/components/esp_hal_i2c/include -I/Users/zaharmac/Downloads/esp-idf-v6.0.2/components/esp_hal_twai/include -I/Users/zaharmac/Downloads/esp-idf-v6.0.2/components/esp_hal_twai/esp32s3/include -I/Users/zaharmac/Downloads/esp-idf-v6.0.2/components/esp_hal_touch_sens/esp32s3/include -I/Users/zaharmac/Downloads/esp-idf-v6.0.2/components/esp_hal_touch_sens/include -I/Users/zaharmac/Downloads/esp-idf-v6.0.2/components/esp_timer/include -I/Users/zaharmac/Downloads/esp-idf-v6.0.2/components/esp_driver_gpio/include -I/Users/zaharmac/Downloads/esp-idf-v6.0.2/components/esp_driver_i2c/include -I/Users/zaharmac/Projects/emdedded/finalproject/components/u8g2/csrc -I/Users/zaharmac/Downloads/esp-idf-v6.0.2/components/esp_driver_spi/include -I/Users/zaharmac/Downloads/esp-idf-v6.0.2/components/esp_pm/include -I/Users/zaharmac/Downloads/esp-idf-v6.0.2/components/esp_hal_gpspi/include -I/Users/zaharmac/Downloads/esp-idf-v6.0.2/components/esp_hal_gpspi/esp32s3/include -I/Users/zaharmac/Downloads/esp-idf-v6.0.2/components/esp_driver_dma/include @"/Users/zaharmac/Projects/emdedded/finalproject/build/toolchain/cxxflags" -fdiagnostics-color=always -ffunction-sections -fdata-sections -Wall -Werror -Wno-error=unused-function -Wno-error=unused-variable -Wno-error=unused-but-set-variable -Wno-error=deprecated-declarations -Wextra -Wno-error=extra -Wno-unused-parameter -Wno-sign-compare -Wno-enum-conversion -gdwarf-4 -ggdb -Og -fno-shrink-wrap -fmacro-prefix-map=/Users/zaharmac/Projects/emdedded/finalproject=. -fmacro-prefix-map=/Users/zaharmac/Downloads/esp-idf-v6.0.2=/IDF -fstrict-volatile-bitfields -fno-jump-tables -fno-tree-switch-conversion -std=gnu++26 -fexceptions -fuse-cxa-atexit -MD -MT esp-idf/main/CMakeFiles/__idf_main.dir/main.cpp.obj -MF esp-idf/main/CMakeFiles/__idf_main.dir/main.cpp.obj.d -o esp-idf/main/CMakeFiles/__idf_main.dir/main.cpp.obj -c /Users/zaharmac/Projects/emdedded/finalproject/main/main.cpp
+In file included from [01m[K/Users/zaharmac/Projects/emdedded/finalproject/main/main.cpp:9[m[K:
+[01m[K/Users/zaharmac/Downloads/esp-idf-v6.0.2/components/driver/i2c/include/driver/i2c.h:29:103:[m[K [01;36m[Knote: [m[K'[01m[K#pragma message: 
+================================ CRITICAL WARNING ================================
+This legacy I2C driver (driver/i2c.h) is officially END-OF-LIFE (EOL) as of ESP-IDF v6.0.
+
+1. NO SUPPORT: ESP-IDF will not provide updates, bug fixes, or security patches timely.
+2. PLANNED REMOVAL: This driver WILL BE REMOVED in ESP-IDF v7.0 (next major release).
+3. ACTION REQUIRED: Migrate to 'driver/i2c_master.h' or 'driver/i2c_slave.h' immediately.
+   - If you are a library maintainer, please update your code.
+   - If you are using 3rd-party libraries, contact the authors for updates.
+
+4. SUPPRESS WARNING: Set Kconfig 'CONFIG_I2C_SUPPRESS_DEPRECATE_WARN=y' to silent
+   this warning. However, by doing so, YOU ASSUME ALL RISKS including potential
+   security vulnerabilities, system instability, and future incompatibility.
+
+For API reference of the new I2C driver, see: https://docs.espressif.com/projects/esp-idf/en/latest/esp32/api-reference/peripherals/i2c.html
+For other items about migration, see: https://docs.espressif.com/projects/esp-idf/en/latest/esp32/migration-guides/index.html
+==================================================================================
+   [m[K'
+   29 |                 "==================================================================================\n"[01;36m[K)[m[K
+      |                                                                                                       [01;36m[K^[m[K
+In file included from [01m[K/Users/zaharmac/Projects/emdedded/finalproject/main/main.cpp:12[m[K:
+[01m[K/Users/zaharmac/Projects/emdedded/finalproject/main/main.cpp:[m[K In function '[01m[Kvoid[01;32m[K app_main[m[K()[m[K':
+[01m[K/Users/zaharmac/Projects/emdedded/finalproject/main/main.cpp:35:29:[m[K [01;31m[Kerror: [m[Kinvalid conversion from '[01m[K[01;32m[Kint[m[K[m[K' to '[01m[K[01;34m[Kgpio_num_t[m[K[m[K' [[01;31m[K-fpermissive[m[K]
+   35 | #define ENC_A               [01;32m[K3[m[K[01;32m[K5[m[K
+      |                             [01;32m[K^[m[K[01;32m[K~[m[K
+      |                             [01;32m[K|[m[K
+      |                             [01;32m[Kint[m[K
+[01m[K/Users/zaharmac/Downloads/esp-idf-v6.0.2/components/log/include/esp_log.h:194:178:[m[K [01;36m[Knote: [m[Kin definition of macro '[01m[KESP_LOG_LEVEL[m[K'
+  194 |         if (ESP_LOG_GET_LEVEL(configs)==ESP_LOG_ERROR)        { esp_log(ESP_LOG_CONFIG_INIT(ESP_LOG_ERROR),   tag, LOG_FORMAT(E, format), esp_log_timestamp(), tag __VA_OPT__(,) [01;36m[K__VA_ARGS__[m[K); } \
+      |                                                                                                                                                                                  [01;36m[K^~~~~~~~~~~[m[K
+[01m[K/Users/zaharmac/Downloads/esp-idf-v6.0.2/components/log/include/esp_log.h:79:41:[m[K [01;36m[Knote: [m[Kin expansion of macro '[01m[KESP_LOG_LEVEL_LOCAL[m[K'
+   79 | #define ESP_LOGI(tag, format, ...) do { [01;36m[KESP_LOG_LEVEL_LOCAL[m[K(ESP_LOG_INFO, tag, format __VA_OPT__(,) __VA_ARGS__); } while(0)
+      |                                         [01;36m[K^~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/Users/zaharmac/Projects/emdedded/finalproject/main/main.cpp:546:9:[m[K [01;36m[Knote: [m[Kin expansion of macro '[01m[KESP_LOGI[m[K'
+  546 |         [01;36m[KESP_LOGI[m[K(TAG, "Encoder: %d, A=%d, B=%d", g_encoder_pos,
+      |         [01;36m[K^~~~~~~~[m[K
+[01m[K/Users/zaharmac/Projects/emdedded/finalproject/main/main.cpp:547:33:[m[K [01;36m[Knote: [m[Kin expansion of macro '[01m[KENC_A[m[K'
+  547 |                  gpio_get_level([01;36m[KENC_A[m[K), gpio_get_level(ENC_B));
+      |                                 [01;36m[K^~~~~[m[K
+In file included from [01m[K/Users/zaharmac/Projects/emdedded/finalproject/main/main.cpp:8[m[K:
+[01m[K/Users/zaharmac/Downloads/esp-idf-v6.0.2/components/esp_driver_gpio/include/driver/gpio.h:144:31:[m[K [01;36m[Knote: [m[Kinitializing argument 1 of '[01m[Kint[01;32m[K gpio_get_level[m[K(gpio_num_t)[m[K'
+  144 | int gpio_get_level([01;34m[Kg[m[K[01;34m[Kp[m[K[01;34m[Ki[m[K[01;34m[Ko[m[K[01;34m[K_[m[K[01;34m[Kn[m[K[01;34m[Ku[m[K[01;34m[Km[m[K[01;34m[K_[m[K[01;34m[Kt[m[K[01;34m[K [m[K[01;34m[Kg[m[K[01;34m[Kp[m[K[01;34m[Ki[m[K[01;34m[Ko[m[K[01;34m[K_[m[K[01;34m[Kn[m[K[01;34m[Ku[m[K[01;34m[Km[m[K);
+      |                    [01;34m[K~[m[K[01;34m[K~[m[K[01;34m[K~[m[K[01;34m[K~[m[K[01;34m[K~[m[K[01;34m[K~[m[K[01;34m[K~[m[K[01;34m[K~[m[K[01;34m[K~[m[K[01;34m[K~[m[K[01;34m[K~[m[K[01;34m[K^[m[K[01;34m[K~[m[K[01;34m[K~[m[K[01;34m[K~[m[K[01;34m[K~[m[K[01;34m[K~[m[K[01;34m[K~[m[K[01;34m[K~[m[K
+[01m[K/Users/zaharmac/Projects/emdedded/finalproject/main/main.cpp:36:29:[m[K [01;31m[Kerror: [m[Kinvalid conversion from '[01m[K[01;32m[Kint[m[K[m[K' to '[01m[K[01;34m[Kgpio_num_t[m[K[m[K' [[01;31m[K-fpermissive[m[K]
+   36 | #define ENC_B               [01;32m[K3[m[K[01;32m[K6[m[K
+      |                             [01;32m[K^[m[K[01;32m[K~[m[K
+      |                             [01;32m[K|[m[K
+      |                             [01;32m[Kint[m[K
+[01m[K/Users/zaharmac/Downloads/esp-idf-v6.0.2/components/log/include/esp_log.h:194:178:[m[K [01;36m[Knote: [m[Kin definition of macro '[01m[KESP_LOG_LEVEL[m[K'
+  194 |         if (ESP_LOG_GET_LEVEL(configs)==ESP_LOG_ERROR)        { esp_log(ESP_LOG_CONFIG_INIT(ESP_LOG_ERROR),   tag, LOG_FORMAT(E, format), esp_log_timestamp(), tag __VA_OPT__(,) [01;36m[K__VA_ARGS__[m[K); } \
+      |                                                                                                                                                                                  [01;36m[K^~~~~~~~~~~[m[K
+[01m[K/Users/zaharmac/Downloads/esp-idf-v6.0.2/components/log/include/esp_log.h:79:41:[m[K [01;36m[Knote: [m[Kin expansion of macro '[01m[KESP_LOG_LEVEL_LOCAL[m[K'
+   79 | #define ESP_LOGI(tag, format, ...) do { [01;36m[KESP_LOG_LEVEL_LOCAL[m[K(ESP_LOG_INFO, tag, format __VA_OPT__(,) __VA_ARGS__); } while(0)
+      |                                         [01;36m[K^~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/Users/zaharmac/Projects/emdedded/finalproject/main/main.cpp:546:9:[m[K [01;36m[Knote: [m[Kin expansion of macro '[01m[KESP_LOGI[m[K'
+  546 |         [01;36m[KESP_LOGI[m[K(TAG, "Encoder: %d, A=%d, B=%d", g_encoder_pos,
+      |         [01;36m[K^~~~~~~~[m[K
+[01m[K/Users/zaharmac/Projects/emdedded/finalproject/main/main.cpp:547:56:[m[K [01;36m[Knote: [m[Kin expansion of macro '[01m[KENC_B[m[K'
+  547 |                  gpio_get_level(ENC_A), gpio_get_level([01;36m[KENC_B[m[K));
+      |                                                        [01;36m[K^~~~~[m[K
+[01m[K/Users/zaharmac/Downloads/esp-idf-v6.0.2/components/esp_driver_gpio/include/driver/gpio.h:144:31:[m[K [01;36m[Knote: [m[Kinitializing argument 1 of '[01m[Kint[01;32m[K gpio_get_level[m[K(gpio_num_t)[m[K'
+  144 | int gpio_get_level([01;34m[Kg[m[K[01;34m[Kp[m[K[01;34m[Ki[m[K[01;34m[Ko[m[K[01;34m[K_[m[K[01;34m[Kn[m[K[01;34m[Ku[m[K[01;34m[Km[m[K[01;34m[K_[m[K[01;34m[Kt[m[K[01;34m[K [m[K[01;34m[Kg[m[K[01;34m[Kp[m[K[01;34m[Ki[m[K[01;34m[Ko[m[K[01;34m[K_[m[K[01;34m[Kn[m[K[01;34m[Ku[m[K[01;34m[Km[m[K);
+      |                    [01;34m[K~[m[K[01;34m[K~[m[K[01;34m[K~[m[K[01;34m[K~[m[K[01;34m[K~[m[K[01;34m[K~[m[K[01;34m[K~[m[K[01;34m[K~[m[K[01;34m[K~[m[K[01;34m[K~[m[K[01;34m[K~[m[K[01;34m[K^[m[K[01;34m[K~[m[K[01;34m[K~[m[K[01;34m[K~[m[K[01;34m[K~[m[K[01;34m[K~[m[K[01;34m[K~[m[K[01;34m[K~[m[K
+[01m[K/Users/zaharmac/Projects/emdedded/finalproject/main/main.cpp:35:29:[m[K [01;31m[Kerror: [m[Kinvalid conversion from '[01m[K[01;32m[Kint[m[K[m[K' to '[01m[K[01;34m[Kgpio_num_t[m[K[m[K' [[01;31m[K-fpermissive[m[K]
+   35 | #define ENC_A               [01;32m[K3[m[K[01;32m[K5[m[K
+      |                             [01;32m[K^[m[K[01;32m[K~[m[K
+      |                             [01;32m[K|[m[K
+      |                             [01;32m[Kint[m[K
+[01m[K/Users/zaharmac/Downloads/esp-idf-v6.0.2/components/log/include/esp_log.h:195:178:[m[K [01;36m[Knote: [m[Kin definition of macro '[01m[KESP_LOG_LEVEL[m[K'
+  195 |         else if (ESP_LOG_GET_LEVEL(configs)==ESP_LOG_WARN)    { esp_log(ESP_LOG_CONFIG_INIT(ESP_LOG_WARN),    tag, LOG_FORMAT(W, format), esp_log_timestamp(), tag __VA_OPT__(,) [01;36m[K__VA_ARGS__[m[K); } \
+      |                                                                                                                                                                                  [01;36m[K^~~~~~~~~~~[m[K
+[01m[K/Users/zaharmac/Downloads/esp-idf-v6.0.2/components/log/include/esp_log.h:79:41:[m[K [01;36m[Knote: [m[Kin expansion of macro '[01m[KESP_LOG_LEVEL_LOCAL[m[K'
+   79 | #define ESP_LOGI(tag, format, ...) do { [01;36m[KESP_LOG_LEVEL_LOCAL[m[K(ESP_LOG_INFO, tag, format __VA_OPT__(,) __VA_ARGS__); } while(0)
+      |                                         [01;36m[K^~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/Users/zaharmac/Projects/emdedded/finalproject/main/main.cpp:546:9:[m[K [01;36m[Knote: [m[Kin expansion of macro '[01m[KESP_LOGI[m[K'
+  546 |         [01;36m[KESP_LOGI[m[K(TAG, "Encoder: %d, A=%d, B=%d", g_encoder_pos,
+      |         [01;36m[K^~~~~~~~[m[K
+[01m[K/Users/zaharmac/Projects/emdedded/finalproject/main/main.cpp:547:33:[m[K [01;36m[Knote: [m[Kin expansion of macro '[01m[KENC_A[m[K'
+  547 |                  gpio_get_level([01;36m[KENC_A[m[K), gpio_get_level(ENC_B));
+      |                                 [01;36m[K^~~~~[m[K
+[01m[K/Users/zaharmac/Downloads/esp-idf-v6.0.2/components/esp_driver_gpio/include/driver/gpio.h:144:31:[m[K [01;36m[Knote: [m[Kinitializing argument 1 of '[01m[Kint[01;32m[K gpio_get_level[m[K(gpio_num_t)[m[K'
+  144 | int gpio_get_level([01;34m[Kg[m[K[01;34m[Kp[m[K[01;34m[Ki[m[K[01;34m[Ko[m[K[01;34m[K_[m[K[01;34m[Kn[m[K[01;34m[Ku[m[K[01;34m[Km[m[K[01;34m[K_[m[K[01;34m[Kt[m[K[01;34m[K [m[K[01;34m[Kg[m[K[01;34m[Kp[m[K[01;34m[Ki[m[K[01;34m[Ko[m[K[01;34m[K_[m[K[01;34m[Kn[m[K[01;34m[Ku[m[K[01;34m[Km[m[K);
+      |                    [01;34m[K~[m[K[01;34m[K~[m[K[01;34m[K~[m[K[01;34m[K~[m[K[01;34m[K~[m[K[01;34m[K~[m[K[01;34m[K~[m[K[01;34m[K~[m[K[01;34m[K~[m[K[01;34m[K~[m[K[01;34m[K~[m[K[01;34m[K^[m[K[01;34m[K~[m[K[01;34m[K~[m[K[01;34m[K~[m[K[01;34m[K~[m[K[01;34m[K~[m[K[01;34m[K~[m[K[01;34m[K~[m[K
+[01m[K/Users/zaharmac/Projects/emdedded/finalproject/main/main.cpp:36:29:[m[K [01;31m[Kerror: [m[Kinvalid conversion from '[01m[K[01;32m[Kint[m[K[m[K' to '[01m[K[01;34m[Kgpio_num_t[m[K[m[K' [[01;31m[K-fpermissive[m[K]
+   36 | #define ENC_B               [01;32m[K3[m[K[01;32m[K6[m[K
+      |                             [01;32m[K^[m[K[01;32m[K~[m[K
+      |                             [01;32m[K|[m[K
+      |                             [01;32m[Kint[m[K
+[01m[K/Users/zaharmac/Downloads/esp-idf-v6.0.2/components/log/include/esp_log.h:195:178:[m[K [01;36m[Knote: [m[Kin definition of macro '[01m[KESP_LOG_LEVEL[m[K'
+  195 |         else if (ESP_LOG_GET_LEVEL(configs)==ESP_LOG_WARN)    { esp_log(ESP_LOG_CONFIG_INIT(ESP_LOG_WARN),    tag, LOG_FORMAT(W, format), esp_log_timestamp(), tag __VA_OPT__(,) [01;36m[K__VA_ARGS__[m[K); } \
+      |                                                                                                                                                                                  [01;36m[K^~~~~~~~~~~[m[K
+[01m[K/Users/zaharmac/Downloads/esp-idf-v6.0.2/components/log/include/esp_log.h:79:41:[m[K [01;36m[Knote: [m[Kin expansion of macro '[01m[KESP_LOG_LEVEL_LOCAL[m[K'
+   79 | #define ESP_LOGI(tag, format, ...) do { [01;36m[KESP_LOG_LEVEL_LOCAL[m[K(ESP_LOG_INFO, tag, format __VA_OPT__(,) __VA_ARGS__); } while(0)
+      |                                         [01;36m[K^~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/Users/zaharmac/Projects/emdedded/finalproject/main/main.cpp:546:9:[m[K [01;36m[Knote: [m[Kin expansion of macro '[01m[KESP_LOGI[m[K'
+  546 |         [01;36m[KESP_LOGI[m[K(TAG, "Encoder: %d, A=%d, B=%d", g_encoder_pos,
+      |         [01;36m[K^~~~~~~~[m[K
+[01m[K/Users/zaharmac/Projects/emdedded/finalproject/main/main.cpp:547:56:[m[K [01;36m[Knote: [m[Kin expansion of macro '[01m[KENC_B[m[K'
+  547 |                  gpio_get_level(ENC_A), gpio_get_level([01;36m[KENC_B[m[K));
+      |                                                        [01;36m[K^~~~~[m[K
+[01m[K/Users/zaharmac/Downloads/esp-idf-v6.0.2/components/esp_driver_gpio/include/driver/gpio.h:144:31:[m[K [01;36m[Knote: [m[Kinitializing argument 1 of '[01m[Kint[01;32m[K gpio_get_level[m[K(gpio_num_t)[m[K'
+  144 | int gpio_get_level([01;34m[Kg[m[K[01;34m[Kp[m[K[01;34m[Ki[m[K[01;34m[Ko[m[K[01;34m[K_[m[K[01;34m[Kn[m[K[01;34m[Ku[m[K[01;34m[Km[m[K[01;34m[K_[m[K[01;34m[Kt[m[K[01;34m[K [m[K[01;34m[Kg[m[K[01;34m[Kp[m[K[01;34m[Ki[m[K[01;34m[Ko[m[K[01;34m[K_[m[K[01;34m[Kn[m[K[01;34m[Ku[m[K[01;34m[Km[m[K);
+      |                    [01;34m[K~[m[K[01;34m[K~[m[K[01;34m[K~[m[K[01;34m[K~[m[K[01;34m[K~[m[K[01;34m[K~[m[K[01;34m[K~[m[K[01;34m[K~[m[K[01;34m[K~[m[K[01;34m[K~[m[K[01;34m[K~[m[K[01;34m[K^[m[K[01;34m[K~[m[K[01;34m[K~[m[K[01;34m[K~[m[K[01;34m[K~[m[K[01;34m[K~[m[K[01;34m[K~[m[K[01;34m[K~[m[K
+[01m[K/Users/zaharmac/Projects/emdedded/finalproject/main/main.cpp:35:29:[m[K [01;31m[Kerror: [m[Kinvalid conversion from '[01m[K[01;32m[Kint[m[K[m[K' to '[01m[K[01;34m[Kgpio_num_t[m[K[m[K' [[01;31m[K-fpermissive[m[K]
+   35 | #define ENC_A               [01;32m[K3[m[K[01;32m[K5[m[K
+      |                             [01;32m[K^[m[K[01;32m[K~[m[K
+      |                             [01;32m[K|[m[K
+      |                             [01;32m[Kint[m[K
+[01m[K/Users/zaharmac/Downloads/esp-idf-v6.0.2/components/log/include/esp_log.h:196:178:[m[K [01;36m[Knote: [m[Kin definition of macro '[01m[KESP_LOG_LEVEL[m[K'
+  196 |         else if (ESP_LOG_GET_LEVEL(configs)==ESP_LOG_DEBUG)   { esp_log(ESP_LOG_CONFIG_INIT(ESP_LOG_DEBUG),   tag, LOG_FORMAT(D, format), esp_log_timestamp(), tag __VA_OPT__(,) [01;36m[K__VA_ARGS__[m[K); } \
+      |                                                                                                                                                                                  [01;36m[K^~~~~~~~~~~[m[K
+[01m[K/Users/zaharmac/Downloads/esp-idf-v6.0.2/components/log/include/esp_log.h:79:41:[m[K [01;36m[Knote: [m[Kin expansion of macro '[01m[KESP_LOG_LEVEL_LOCAL[m[K'
+   79 | #define ESP_LOGI(tag, format, ...) do { [01;36m[KESP_LOG_LEVEL_LOCAL[m[K(ESP_LOG_INFO, tag, format __VA_OPT__(,) __VA_ARGS__); } while(0)
+      |                                         [01;36m[K^~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/Users/zaharmac/Projects/emdedded/finalproject/main/main.cpp:546:9:[m[K [01;36m[Knote: [m[Kin expansion of macro '[01m[KESP_LOGI[m[K'
+  546 |         [01;36m[KESP_LOGI[m[K(TAG, "Encoder: %d, A=%d, B=%d", g_encoder_pos,
+      |         [01;36m[K^~~~~~~~[m[K
+[01m[K/Users/zaharmac/Projects/emdedded/finalproject/main/main.cpp:547:33:[m[K [01;36m[Knote: [m[Kin expansion of macro '[01m[KENC_A[m[K'
+  547 |                  gpio_get_level([01;36m[KENC_A[m[K), gpio_get_level(ENC_B));
+      |                                 [01;36m[K^~~~~[m[K
+[01m[K/Users/zaharmac/Downloads/esp-idf-v6.0.2/components/esp_driver_gpio/include/driver/gpio.h:144:31:[m[K [01;36m[Knote: [m[Kinitializing argument 1 of '[01m[Kint[01;32m[K gpio_get_level[m[K(gpio_num_t)[m[K'
+  144 | int gpio_get_level([01;34m[Kg[m[K[01;34m[Kp[m[K[01;34m[Ki[m[K[01;34m[Ko[m[K[01;34m[K_[m[K[01;34m[Kn[m[K[01;34m[Ku[m[K[01;34m[Km[m[K[01;34m[K_[m[K[01;34m[Kt[m[K[01;34m[K [m[K[01;34m[Kg[m[K[01;34m[Kp[m[K[01;34m[Ki[m[K[01;34m[Ko[m[K[01;34m[K_[m[K[01;34m[Kn[m[K[01;34m[Ku[m[K[01;34m[Km[m[K);
+      |                    [01;34m[K~[m[K[01;34m[K~[m[K[01;34m[K~[m[K[01;34m[K~[m[K[01;34m[K~[m[K[01;34m[K~[m[K[01;34m[K~[m[K[01;34m[K~[m[K[01;34m[K~[m[K[01;34m[K~[m[K[01;34m[K~[m[K[01;34m[K^[m[K[01;34m[K~[m[K[01;34m[K~[m[K[01;34m[K~[m[K[01;34m[K~[m[K[01;34m[K~[m[K[01;34m[K~[m[K[01;34m[K~[m[K
+[01m[K/Users/zaharmac/Projects/emdedded/finalproject/main/main.cpp:36:29:[m[K [01;31m[Kerror: [m[Kinvalid conversion from '[01m[K[01;32m[Kint[m[K[m[K' to '[01m[K[01;34m[Kgpio_num_t[m[K[m[K' [[01;31m[K-fpermissive[m[K]
+   36 | #define ENC_B               [01;32m[K3[m[K[01;32m[K6[m[K
+      |                             [01;32m[K^[m[K[01;32m[K~[m[K
+      |                             [01;32m[K|[m[K
+      |                             [01;32m[Kint[m[K
+[01m[K/Users/zaharmac/Downloads/esp-idf-v6.0.2/components/log/include/esp_log.h:196:178:[m[K [01;36m[Knote: [m[Kin definition of macro '[01m[KESP_LOG_LEVEL[m[K'
+  196 |         else if (ESP_LOG_GET_LEVEL(configs)==ESP_LOG_DEBUG)   { esp_log(ESP_LOG_CONFIG_INIT(ESP_LOG_DEBUG),   tag, LOG_FORMAT(D, format), esp_log_timestamp(), tag __VA_OPT__(,) [01;36m[K__VA_ARGS__[m[K); } \
+      |                                                                                                                                                                                  [01;36m[K^~~~~~~~~~~[m[K
+[01m[K/Users/zaharmac/Downloads/esp-idf-v6.0.2/components/log/include/esp_log.h:79:41:[m[K [01;36m[Knote: [m[Kin expansion of macro '[01m[KESP_LOG_LEVEL_LOCAL[m[K'
+   79 | #define ESP_LOGI(tag, format, ...) do { [01;36m[KESP_LOG_LEVEL_LOCAL[m[K(ESP_LOG_INFO, tag, format __VA_OPT__(,) __VA_ARGS__); } while(0)
+      |                                         [01;36m[K^~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/Users/zaharmac/Projects/emdedded/finalproject/main/main.cpp:546:9:[m[K [01;36m[Knote: [m[Kin expansion of macro '[01m[KESP_LOGI[m[K'
+  546 |         [01;36m[KESP_LOGI[m[K(TAG, "Encoder: %d, A=%d, B=%d", g_encoder_pos,
+      |         [01;36m[K^~~~~~~~[m[K
+[01m[K/Users/zaharmac/Projects/emdedded/finalproject/main/main.cpp:547:56:[m[K [01;36m[Knote: [m[Kin expansion of macro '[01m[KENC_B[m[K'
+  547 |                  gpio_get_level(ENC_A), gpio_get_level([01;36m[KENC_B[m[K));
+      |                                                        [01;36m[K^~~~~[m[K
+[01m[K/Users/zaharmac/Downloads/esp-idf-v6.0.2/components/esp_driver_gpio/include/driver/gpio.h:144:31:[m[K [01;36m[Knote: [m[Kinitializing argument 1 of '[01m[Kint[01;32m[K gpio_get_level[m[K(gpio_num_t)[m[K'
+  144 | int gpio_get_level([01;34m[Kg[m[K[01;34m[Kp[m[K[01;34m[Ki[m[K[01;34m[Ko[m[K[01;34m[K_[m[K[01;34m[Kn[m[K[01;34m[Ku[m[K[01;34m[Km[m[K[01;34m[K_[m[K[01;34m[Kt[m[K[01;34m[K [m[K[01;34m[Kg[m[K[01;34m[Kp[m[K[01;34m[Ki[m[K[01;34m[Ko[m[K[01;34m[K_[m[K[01;34m[Kn[m[K[01;34m[Ku[m[K[01;34m[Km[m[K);
+      |                    [01;34m[K~[m[K[01;34m[K~[m[K[01;34m[K~[m[K[01;34m[K~[m[K[01;34m[K~[m[K[01;34m[K~[m[K[01;34m[K~[m[K[01;34m[K~[m[K[01;34m[K~[m[K[01;34m[K~[m[K[01;34m[K~[m[K[01;34m[K^[m[K[01;34m[K~[m[K[01;34m[K~[m[K[01;34m[K~[m[K[01;34m[K~[m[K[01;34m[K~[m[K[01;34m[K~[m[K[01;34m[K~[m[K
+[01m[K/Users/zaharmac/Projects/emdedded/finalproject/main/main.cpp:35:29:[m[K [01;31m[Kerror: [m[Kinvalid conversion from '[01m[K[01;32m[Kint[m[K[m[K' to '[01m[K[01;34m[Kgpio_num_t[m[K[m[K' [[01;31m[K-fpermissive[m[K]
+   35 | #define ENC_A               [01;32m[K3[m[K[01;32m[K5[m[K
+      |                             [01;32m[K^[m[K[01;32m[K~[m[K
+      |                             [01;32m[K|[m[K
+      |                             [01;32m[Kint[m[K
+[01m[K/Users/zaharmac/Downloads/esp-idf-v6.0.2/components/log/include/esp_log.h:197:178:[m[K [01;36m[Knote: [m[Kin definition of macro '[01m[KESP_LOG_LEVEL[m[K'
+  197 |         else if (ESP_LOG_GET_LEVEL(configs)==ESP_LOG_VERBOSE) { esp_log(ESP_LOG_CONFIG_INIT(ESP_LOG_VERBOSE), tag, LOG_FORMAT(V, format), esp_log_timestamp(), tag __VA_OPT__(,) [01;36m[K__VA_ARGS__[m[K); } \
+      |                                                                                                                                                                                  [01;36m[K^~~~~~~~~~~[m[K
+[01m[K/Users/zaharmac/Downloads/esp-idf-v6.0.2/components/log/include/esp_log.h:79:41:[m[K [01;36m[Knote: [m[Kin expansion of macro '[01m[KESP_LOG_LEVEL_LOCAL[m[K'
+   79 | #define ESP_LOGI(tag, format, ...) do { [01;36m[KESP_LOG_LEVEL_LOCAL[m[K(ESP_LOG_INFO, tag, format __VA_OPT__(,) __VA_ARGS__); } while(0)
+      |                                         [01;36m[K^~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/Users/zaharmac/Projects/emdedded/finalproject/main/main.cpp:546:9:[m[K [01;36m[Knote: [m[Kin expansion of macro '[01m[KESP_LOGI[m[K'
+  546 |         [01;36m[KESP_LOGI[m[K(TAG, "Encoder: %d, A=%d, B=%d", g_encoder_pos,
+      |         [01;36m[K^~~~~~~~[m[K
+[01m[K/Users/zaharmac/Projects/emdedded/finalproject/main/main.cpp:547:33:[m[K [01;36m[Knote: [m[Kin expansion of macro '[01m[KENC_A[m[K'
+  547 |                  gpio_get_level([01;36m[KENC_A[m[K), gpio_get_level(ENC_B));
+      |                                 [01;36m[K^~~~~[m[K
+[01m[K/Users/zaharmac/Downloads/esp-idf-v6.0.2/components/esp_driver_gpio/include/driver/gpio.h:144:31:[m[K [01;36m[Knote: [m[Kinitializing argument 1 of '[01m[Kint[01;32m[K gpio_get_level[m[K(gpio_num_t)[m[K'
+  144 | int gpio_get_level([01;34m[Kg[m[K[01;34m[Kp[m[K[01;34m[Ki[m[K[01;34m[Ko[m[K[01;34m[K_[m[K[01;34m[Kn[m[K[01;34m[Ku[m[K[01;34m[Km[m[K[01;34m[K_[m[K[01;34m[Kt[m[K[01;34m[K [m[K[01;34m[Kg[m[K[01;34m[Kp[m[K[01;34m[Ki[m[K[01;34m[Ko[m[K[01;34m[K_[m[K[01;34m[Kn[m[K[01;34m[Ku[m[K[01;34m[Km[m[K);
+      |                    [01;34m[K~[m[K[01;34m[K~[m[K[01;34m[K~[m[K[01;34m[K~[m[K[01;34m[K~[m[K[01;34m[K~[m[K[01;34m[K~[m[K[01;34m[K~[m[K[01;34m[K~[m[K[01;34m[K~[m[K[01;34m[K~[m[K[01;34m[K^[m[K[01;34m[K~[m[K[01;34m[K~[m[K[01;34m[K~[m[K[01;34m[K~[m[K[01;34m[K~[m[K[01;34m[K~[m[K[01;34m[K~[m[K
+[01m[K/Users/zaharmac/Projects/emdedded/finalproject/main/main.cpp:36:29:[m[K [01;31m[Kerror: [m[Kinvalid conversion from '[01m[K[01;32m[Kint[m[K[m[K' to '[01m[K[01;34m[Kgpio_num_t[m[K[m[K' [[01;31m[K-fpermissive[m[K]
+   36 | #define ENC_B               [01;32m[K3[m[K[01;32m[K6[m[K
+      |                             [01;32m[K^[m[K[01;32m[K~[m[K
+      |                             [01;32m[K|[m[K
+      |                             [01;32m[Kint[m[K
+[01m[K/Users/zaharmac/Downloads/esp-idf-v6.0.2/components/log/include/esp_log.h:197:178:[m[K [01;36m[Knote: [m[Kin definition of macro '[01m[KESP_LOG_LEVEL[m[K'
+  197 |         else if (ESP_LOG_GET_LEVEL(configs)==ESP_LOG_VERBOSE) { esp_log(ESP_LOG_CONFIG_INIT(ESP_LOG_VERBOSE), tag, LOG_FORMAT(V, format), esp_log_timestamp(), tag __VA_OPT__(,) [01;36m[K__VA_ARGS__[m[K); } \
+      |                                                                                                                                                                                  [01;36m[K^~~~~~~~~~~[m[K
+[01m[K/Users/zaharmac/Downloads/esp-idf-v6.0.2/components/log/include/esp_log.h:79:41:[m[K [01;36m[Knote: [m[Kin expansion of macro '[01m[KESP_LOG_LEVEL_LOCAL[m[K'
+   79 | #define ESP_LOGI(tag, format, ...) do { [01;36m[KESP_LOG_LEVEL_LOCAL[m[K(ESP_LOG_INFO, tag, format __VA_OPT__(,) __VA_ARGS__); } while(0)
+      |                                         [01;36m[K^~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/Users/zaharmac/Projects/emdedded/finalproject/main/main.cpp:546:9:[m[K [01;36m[Knote: [m[Kin expansion of macro '[01m[KESP_LOGI[m[K'
+  546 |         [01;36m[KESP_LOGI[m[K(TAG, "Encoder: %d, A=%d, B=%d", g_encoder_pos,
+      |         [01;36m[K^~~~~~~~[m[K
+[01m[K/Users/zaharmac/Projects/emdedded/finalproject/main/main.cpp:547:56:[m[K [01;36m[Knote: [m[Kin expansion of macro '[01m[KENC_B[m[K'
+  547 |                  gpio_get_level(ENC_A), gpio_get_level([01;36m[KENC_B[m[K));
+      |                                                        [01;36m[K^~~~~[m[K
+[01m[K/Users/zaharmac/Downloads/esp-idf-v6.0.2/components/esp_driver_gpio/include/driver/gpio.h:144:31:[m[K [01;36m[Knote: [m[Kinitializing argument 1 of '[01m[Kint[01;32m[K gpio_get_level[m[K(gpio_num_t)[m[K'
+  144 | int gpio_get_level([01;34m[Kg[m[K[01;34m[Kp[m[K[01;34m[Ki[m[K[01;34m[Ko[m[K[01;34m[K_[m[K[01;34m[Kn[m[K[01;34m[Ku[m[K[01;34m[Km[m[K[01;34m[K_[m[K[01;34m[Kt[m[K[01;34m[K [m[K[01;34m[Kg[m[K[01;34m[Kp[m[K[01;34m[Ki[m[K[01;34m[Ko[m[K[01;34m[K_[m[K[01;34m[Kn[m[K[01;34m[Ku[m[K[01;34m[Km[m[K);
+      |                    [01;34m[K~[m[K[01;34m[K~[m[K[01;34m[K~[m[K[01;34m[K~[m[K[01;34m[K~[m[K[01;34m[K~[m[K[01;34m[K~[m[K[01;34m[K~[m[K[01;34m[K~[m[K[01;34m[K~[m[K[01;34m[K~[m[K[01;34m[K^[m[K[01;34m[K~[m[K[01;34m[K~[m[K[01;34m[K~[m[K[01;34m[K~[m[K[01;34m[K~[m[K[01;34m[K~[m[K[01;34m[K~[m[K
+[01m[K/Users/zaharmac/Projects/emdedded/finalproject/main/main.cpp:35:29:[m[K [01;31m[Kerror: [m[Kinvalid conversion from '[01m[K[01;32m[Kint[m[K[m[K' to '[01m[K[01;34m[Kgpio_num_t[m[K[m[K' [[01;31m[K-fpermissive[m[K]
+   35 | #define ENC_A               [01;32m[K3[m[K[01;32m[K5[m[K
+      |                             [01;32m[K^[m[K[01;32m[K~[m[K
+      |                             [01;32m[K|[m[K
+      |                             [01;32m[Kint[m[K
+[01m[K/Users/zaharmac/Downloads/esp-idf-v6.0.2/components/log/include/esp_log.h:198:178:[m[K [01;36m[Knote: [m[Kin definition of macro '[01m[KESP_LOG_LEVEL[m[K'
+  198 |         else                                                  { esp_log(ESP_LOG_CONFIG_INIT(ESP_LOG_INFO),    tag, LOG_FORMAT(I, format), esp_log_timestamp(), tag __VA_OPT__(,) [01;36m[K__VA_ARGS__[m[K); } \
+      |                                                                                                                                                                                  [01;36m[K^~~~~~~~~~~[m[K
+[01m[K/Users/zaharmac/Downloads/esp-idf-v6.0.2/components/log/include/esp_log.h:79:41:[m[K [01;36m[Knote: [m[Kin expansion of macro '[01m[KESP_LOG_LEVEL_LOCAL[m[K'
+   79 | #define ESP_LOGI(tag, format, ...) do { [01;36m[KESP_LOG_LEVEL_LOCAL[m[K(ESP_LOG_INFO, tag, format __VA_OPT__(,) __VA_ARGS__); } while(0)
+      |                                         [01;36m[K^~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/Users/zaharmac/Projects/emdedded/finalproject/main/main.cpp:546:9:[m[K [01;36m[Knote: [m[Kin expansion of macro '[01m[KESP_LOGI[m[K'
+  546 |         [01;36m[KESP_LOGI[m[K(TAG, "Encoder: %d, A=%d, B=%d", g_encoder_pos,
+      |         [01;36m[K^~~~~~~~[m[K
+[01m[K/Users/zaharmac/Projects/emdedded/finalproject/main/main.cpp:547:33:[m[K [01;36m[Knote: [m[Kin expansion of macro '[01m[KENC_A[m[K'
+  547 |                  gpio_get_level([01;36m[KENC_A[m[K), gpio_get_level(ENC_B));
+      |                                 [01;36m[K^~~~~[m[K
+[01m[K/Users/zaharmac/Downloads/esp-idf-v6.0.2/components/esp_driver_gpio/include/driver/gpio.h:144:31:[m[K [01;36m[Knote: [m[Kinitializing argument 1 of '[01m[Kint[01;32m[K gpio_get_level[m[K(gpio_num_t)[m[K'
+  144 | int gpio_get_level([01;34m[Kg[m[K[01;34m[Kp[m[K[01;34m[Ki[m[K[01;34m[Ko[m[K[01;34m[K_[m[K[01;34m[Kn[m[K[01;34m[Ku[m[K[01;34m[Km[m[K[01;34m[K_[m[K[01;34m[Kt[m[K[01;34m[K [m[K[01;34m[Kg[m[K[01;34m[Kp[m[K[01;34m[Ki[m[K[01;34m[Ko[m[K[01;34m[K_[m[K[01;34m[Kn[m[K[01;34m[Ku[m[K[01;34m[Km[m[K);
+      |                    [01;34m[K~[m[K[01;34m[K~[m[K[01;34m[K~[m[K[01;34m[K~[m[K[01;34m[K~[m[K[01;34m[K~[m[K[01;34m[K~[m[K[01;34m[K~[m[K[01;34m[K~[m[K[01;34m[K~[m[K[01;34m[K~[m[K[01;34m[K^[m[K[01;34m[K~[m[K[01;34m[K~[m[K[01;34m[K~[m[K[01;34m[K~[m[K[01;34m[K~[m[K[01;34m[K~[m[K[01;34m[K~[m[K
+[01m[K/Users/zaharmac/Projects/emdedded/finalproject/main/main.cpp:36:29:[m[K [01;31m[Kerror: [m[Kinvalid conversion from '[01m[K[01;32m[Kint[m[K[m[K' to '[01m[K[01;34m[Kgpio_num_t[m[K[m[K' [[01;31m[K-fpermissive[m[K]
+   36 | #define ENC_B               [01;32m[K3[m[K[01;32m[K6[m[K
+      |                             [01;32m[K^[m[K[01;32m[K~[m[K
+      |                             [01;32m[K|[m[K
+      |                             [01;32m[Kint[m[K
+[01m[K/Users/zaharmac/Downloads/esp-idf-v6.0.2/components/log/include/esp_log.h:198:178:[m[K [01;36m[Knote: [m[Kin definition of macro '[01m[KESP_LOG_LEVEL[m[K'
+  198 |         else                                                  { esp_log(ESP_LOG_CONFIG_INIT(ESP_LOG_INFO),    tag, LOG_FORMAT(I, format), esp_log_timestamp(), tag __VA_OPT__(,) [01;36m[K__VA_ARGS__[m[K); } \
+      |                                                                                                                                                                                  [01;36m[K^~~~~~~~~~~[m[K
+[01m[K/Users/zaharmac/Downloads/esp-idf-v6.0.2/components/log/include/esp_log.h:79:41:[m[K [01;36m[Knote: [m[Kin expansion of macro '[01m[KESP_LOG_LEVEL_LOCAL[m[K'
+   79 | #define ESP_LOGI(tag, format, ...) do { [01;36m[KESP_LOG_LEVEL_LOCAL[m[K(ESP_LOG_INFO, tag, format __VA_OPT__(,) __VA_ARGS__); } while(0)
+      |                                         [01;36m[K^~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/Users/zaharmac/Projects/emdedded/finalproject/main/main.cpp:546:9:[m[K [01;36m[Knote: [m[Kin expansion of macro '[01m[KESP_LOGI[m[K'
+  546 |         [01;36m[KESP_LOGI[m[K(TAG, "Encoder: %d, A=%d, B=%d", g_encoder_pos,
+      |         [01;36m[K^~~~~~~~[m[K
+[01m[K/Users/zaharmac/Projects/emdedded/finalproject/main/main.cpp:547:56:[m[K [01;36m[Knote: [m[Kin expansion of macro '[01m[KENC_B[m[K'
+  547 |                  gpio_get_level(ENC_A), gpio_get_level([01;36m[KENC_B[m[K));
+      |                                                        [01;36m[K^~~~~[m[K
+[01m[K/Users/zaharmac/Downloads/esp-idf-v6.0.2/components/esp_driver_gpio/include/driver/gpio.h:144:31:[m[K [01;36m[Knote: [m[Kinitializing argument 1 of '[01m[Kint[01;32m[K gpio_get_level[m[K(gpio_num_t)[m[K'
+  144 | int gpio_get_level([01;34m[Kg[m[K[01;34m[Kp[m[K[01;34m[Ki[m[K[01;34m[Ko[m[K[01;34m[K_[m[K[01;34m[Kn[m[K[01;34m[Ku[m[K[01;34m[Km[m[K[01;34m[K_[m[K[01;34m[Kt[m[K[01;34m[K [m[K[01;34m[Kg[m[K[01;34m[Kp[m[K[01;34m[Ki[m[K[01;34m[Ko[m[K[01;34m[K_[m[K[01;34m[Kn[m[K[01;34m[Ku[m[K[01;34m[Km[m[K);
+      |                    [01;34m[K~[m[K[01;34m[K~[m[K[01;34m[K~[m[K[01;34m[K~[m[K[01;34m[K~[m[K[01;34m[K~[m[K[01;34m[K~[m[K[01;34m[K~[m[K[01;34m[K~[m[K[01;34m[K~[m[K[01;34m[K~[m[K[01;34m[K^[m[K[01;34m[K~[m[K[01;34m[K~[m[K[01;34m[K~[m[K[01;34m[K~[m[K[01;34m[K~[m[K[01;34m[K~[m[K[01;34m[K~[m[K
+[3/10] No install step for 'bootloader'
+ninja: build stopped: subcommand failed.

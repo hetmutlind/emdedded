@@ -1,0 +1,2 @@
+source /Users/zaharmac/Projects/emdedded/finalproject/build/bootloader/gdbinit/symbols
+source /Users/zaharmac/Projects/emdedded/finalproject/build/bootloader/gdbinit/connect
